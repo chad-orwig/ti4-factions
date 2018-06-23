@@ -126,13 +126,22 @@ body {
   }
 }
 
-a {
+.nav-button {
+  &.disabled {
+    color: $grey;
+    cursor: default;
+  }
 
   font-weight: bold;
   font-size: 200%;
   text-decoration: none;
+  margin : 0 10px;
   &:visited {
     color: black;
+  }
+  &.right-button {
+    float:right;
+
   }
 }
 

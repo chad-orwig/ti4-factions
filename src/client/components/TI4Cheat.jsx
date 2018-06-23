@@ -2,8 +2,9 @@ const React = require('react');
 const {factionMap} = require('../assets/factions');
 const FactionList = require('./FactionList.jsx');
 const FactionSelectionGrid = require('./FactionSelectionGrid.jsx');
+const ButtonBar = require('./ButtonBar.jsx');
 const _ = require('lodash');
-const { BrowserRouter:Router, Route, Link} = require('react-router-dom');
+const { BrowserRouter:Router, Route} = require('react-router-dom');
 
 function findRaceIndexBuilder() {
     return (factionKey) => _.findIndex(this.state.races, {factionKey});
@@ -38,7 +39,6 @@ function renderFactionListBuilder() {
             .map(({factionKey}) => factionMap[factionKey]);
         return (
             <div>
-                <Link to="/" className="fa fa-arrow-left" />
                 <FactionList factions={selectedFactions}/>;
             </div>
         )
@@ -53,7 +53,6 @@ function renderFactionSelectorBuilder() {
                 unselectFunction={this.unselectFaction}
                 selectFunction={this.selectFaction}
             />
-            <Link to="/factions">Factions</Link>
         </div>
     );
 }
@@ -87,6 +86,7 @@ class TI4Cheat extends React.Component {
         return (
             <Router>
                 <div>
+                    <ButtonBar/>
                     <Route exact path="/" render={this.renderFactionSelector}/>
                     <Route path="/factions" render={this.renderFactionList}/>
                 </div>
