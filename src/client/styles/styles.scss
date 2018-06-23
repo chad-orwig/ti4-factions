@@ -18,7 +18,7 @@ body {
   border: 5px solid black;
   background: $grey;
   h2 {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
   span {
     margin : 0 3px;
@@ -34,7 +34,7 @@ body {
   height: 15px;
   border-radius: 8px;
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
   &.G {
     background-color: $tech-green;
   }
@@ -48,36 +48,54 @@ body {
     background-color: $tech-yellow;
   }
   &.U {
-    border-radius: unset;
+    position: relative;
+    border-radius: .2em;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: 14px;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+    width: 1.5em;
+    height: 1.5em;
     color: #eee;
     background-color: #333;
     text-align: center;
     &:before {
+      position: relative;
+      top : .2em;
+      vertical-align: baseline;
       content : "\F062"
     }
   }
 }
-.technology .name {
-  font-weight: bold;
-  font-size: 1.1em;
-  &.G {
-    color : $tech-green;
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+}
+
+.technology {
+  .tech-text {
+    margin-left: 2em;
   }
-  &.R {
-    color: $tech-red;
-  }
-  &.B {
-    color : $tech-blue
-  }
-  &.Y {
-    color : $tech-yellow
+  .name {
+    font-weight: bold;
+    font-size: 1.1em;
+    &.G {
+      color : $tech-green;
+    }
+    &.R {
+      color: $tech-red;
+    }
+    &.B {
+      color : $tech-blue
+    }
+    &.Y {
+      color : $tech-yellow
+    }
   }
 }
+
 .faction-header {
   position: relative;
   img {

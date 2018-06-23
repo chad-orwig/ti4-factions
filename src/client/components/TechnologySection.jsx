@@ -17,7 +17,7 @@ function TechnologySection({techs}) {
     return (
         <div className="technology-section">
             <h2>Faction Technologies:</h2>
-            <ul>
+            <ul className="tech-list">
                 {technologyElements}
             </ul>
         </div>
