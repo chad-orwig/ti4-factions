@@ -4,6 +4,7 @@ const hacan = require('./hacan');
 const naalu = require('./naalu');
 const yin = require('./yin');
 const yssaril = require('./yssaril');
+const jolNar = require('./jolNar');
 
 const _ = require('lodash');
 
@@ -13,7 +14,8 @@ const factionMap = {
     hacan,
     naalu,
     yin,
-    yssaril
+    yssaril,
+    jolNar
 };
 
 const factionArray = _.sortBy(Object.values(factionMap), "name");
