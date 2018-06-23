@@ -10,6 +10,7 @@ const xxcha = require('./xxcha');
 const sol = require('./sol');
 const l1z1x = require('./l1z1x');
 const sardakk = require('./sardakk');
+const nekro = require('./nekro');
 
 
 const _ = require('lodash');
@@ -26,7 +27,8 @@ const factionMap = {
     xxcha,
     sol,
     l1z1x,
-    sardakk
+    sardakk,
+    nekro
 };
 
 const factionArray = _.sortBy(Object.values(factionMap), "name");
