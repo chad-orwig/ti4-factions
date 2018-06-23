@@ -1,6 +1,6 @@
 $tech-green : forestgreen;
 $tech-red : firebrick;
-$tech-blue: blue;
+$tech-blue: #007bff;
 $tech-yellow: darkgoldenrod;
 $grey : #ddd;
 
@@ -12,6 +12,7 @@ body {
   font-family: sans-serif;
 }
 .faction {
+  border-radius: .3rem;
   margin : 10px;
   padding: 10px;
   border: 5px solid black;
@@ -81,6 +82,7 @@ body {
   position: relative;
   img {
     width: 77px;
+    border-radius: .3rem;
   }
   h1 {
     display: inline-block;
@@ -88,6 +90,8 @@ body {
     margin: 20px 0px 20px 10px;
     max-width : calc(100% - 137px);
     text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
   }
   .commodities {
     display: inline-block;
@@ -110,39 +114,35 @@ body {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    border-radius: .3rem;
     cursor: pointer;
     &.selected {
-      background-color: $tech-green;
+      background-color: rgba($tech-blue, .65);
     }
     img {
       width: 77px;
       display: inline-block;
+      border-radius: .3rem;
     }
     h1 {
       display: inline-block;
       margin: 0;
       flex : 1;
+      font-weight: bold;
+      font-size: 2em;
+      margin-left: 10px;
     }
   }
 }
 
-.nav-button {
-  &.disabled {
-    color: $grey;
-    cursor: default;
+.button-bar {
+  text-align: right;
+  .nav-button {
+
+    font-weight: bold;
+    margin : 10px;
   }
 
-  font-weight: bold;
-  font-size: 200%;
-  text-decoration: none;
-  margin : 0 10px;
-  &:visited {
-    color: black;
-  }
-  &.right-button {
-    float:right;
-
-  }
 }
 
 @media (min-width: $breakpoint-2column) {

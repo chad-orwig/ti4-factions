@@ -39,9 +39,9 @@ function renderFactionListBuilder() {
             .map(({factionKey}) => factionMap[factionKey]);
         return (
             <div>
-                <FactionList factions={selectedFactions}/>;
+                <FactionList factions={selectedFactions}/>
             </div>
-        )
+        );
     }
 }
 
