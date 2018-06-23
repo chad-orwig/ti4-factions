@@ -1,0 +1,169 @@
+$tech-green : forestgreen;
+$tech-red : firebrick;
+$tech-blue: blue;
+$tech-yellow: darkgoldenrod;
+$grey : #ddd;
+
+$breakpoint-2column : 800px;
+$breakpoint-3column : 1200px;
+$breakpoint-4column : 1600px;
+body {
+  font-size: .8em;
+  font-family: sans-serif;
+}
+.faction {
+  margin : 10px;
+  padding: 10px;
+  border: 5px solid black;
+  background: $grey;
+  h2 {
+    font-size: 1.1em;
+  }
+  span {
+    margin : 0 3px;
+  }
+}
+.faction-ability {
+  .name {
+    font-weight: bold;
+  }
+}
+.tech-color{
+  width: 15px;
+  height: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  vertical-align: bottom;
+  &.G {
+    background-color: $tech-green;
+  }
+  &.R {
+    background-color: $tech-red;
+  }
+  &.B {
+    background-color: $tech-blue;
+  }
+  &.Y {
+    background-color: $tech-yellow;
+  }
+  &.U {
+    border-radius: unset;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #eee;
+    background-color: #333;
+    text-align: center;
+    &:before {
+      content : "\F062"
+    }
+  }
+}
+.technology .name {
+  font-weight: bold;
+  font-size: 1.1em;
+  &.G {
+    color : $tech-green;
+  }
+  &.R {
+    color: $tech-red;
+  }
+  &.B {
+    color : $tech-blue
+  }
+  &.Y {
+    color : $tech-yellow
+  }
+}
+.faction-header {
+  position: relative;
+  img {
+    width: 77px;
+  }
+  h1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 0px 20px 10px;
+    max-width : calc(100% - 137px);
+    text-align: center;
+  }
+  .commodities {
+    display: inline-block;
+    font-size: 200%;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+  }
+}
+.faction-selection-grid {
+  display : flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  .faction-selector {
+    padding: 10px;
+    background-color: $grey;
+    flex-grow: 1;
+    margin: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+    &.selected {
+      background-color: $tech-green;
+    }
+    img {
+      width: 77px;
+      display: inline-block;
+    }
+    h1 {
+      display: inline-block;
+      margin: 0;
+      flex : 1;
+    }
+  }
+}
+
+a {
+
+  font-weight: bold;
+  font-size: 200%;
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
+}
+
+@media (min-width: $breakpoint-2column) {
+  .faction-list {
+    display: flex;
+    flex-flow : row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+
+    .faction {
+      display: inline-block;
+      flex : 1;
+      vertical-align: top;
+      min-width: 40%;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-3column) {
+  .faction-list {
+    .faction {
+      min-width: 26%;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-4column) {
+  .faction-list {
+    .faction {
+      min-width: 21%;
+    }
+  }
+}
