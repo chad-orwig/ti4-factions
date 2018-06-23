@@ -13,6 +13,7 @@ const sardakk = require('./sardakk');
 const nekro = require('./nekro');
 const mentak = require('./mentak');
 const muaat = require('./muaat');
+const saar = require('./saar');
 
 
 const _ = require('lodash');
@@ -32,6 +33,7 @@ const factionMap = {
     sardakk,
     nekro,
     mentak,
+    saar,
     muaat
 };
 

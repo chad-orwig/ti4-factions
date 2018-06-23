@@ -1,11 +1,12 @@
 const React = require('react');
 const PropTypes = require('prop-types');
+const SpanOrList = require('./SpanOrList.jsx')
 
 function FactionAbility({name, text}) {
     return (
         <div className="faction-ability">
             <span className="name">{name}</span>
-            <span className="text">{text}</span>
+            <SpanOrList text={text}/>
         </div>
     );
 }
