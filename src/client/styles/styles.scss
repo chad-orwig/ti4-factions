@@ -4,9 +4,9 @@ $tech-blue: #007bff;
 $tech-yellow: darkgoldenrod;
 $grey : #ddd;
 
-$breakpoint-2column : 800px;
-$breakpoint-3column : 1200px;
-$breakpoint-4column : 1600px;
+$breakpoint-2column : 50em;
+$breakpoint-3column : 75em;
+$breakpoint-4column : 100em;
 body {
   font-size: .8em;
   font-family: sans-serif;
@@ -16,7 +16,7 @@ body {
   margin : 10px;
   padding: 10px;
   border: 5px solid black;
-  background: $grey;
+  background-color: $grey;
   h2 {
     font-size: 1.3em;
   }
@@ -127,7 +127,7 @@ body {
   .faction-selector {
     padding: 10px;
     background-color: $grey;
-    flex-grow: 1;
+    flex:  1 0 auto;
     margin: 10px;
     display: flex;
     flex-flow: row nowrap;
@@ -206,5 +206,15 @@ body {
     .faction {
       min-width: 21%;
     }
+  }
+}
+
+@media print {
+  .button-bar {
+    display: none;
+  }
+  .faction {
+    background-color: white;
+    page-break-inside: avoid;
   }
 }
