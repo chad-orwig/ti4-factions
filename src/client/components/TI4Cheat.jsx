@@ -1,10 +1,11 @@
 const React = require('react');
+const { TransitionGroup, CSSTransition } = require('react-transition-group');
 const {factionMap} = require('../assets/factions');
 const FactionList = require('./FactionList.jsx');
 const FactionSelectionGrid = require('./FactionSelectionGrid.jsx');
 const ButtonBar = require('./ButtonBar.jsx');
 const _ = require('lodash');
-const { BrowserRouter:Router, Route} = require('react-router-dom');
+const { BrowserRouter:Router, Route, Switch} = require('react-router-dom');
 
 function findRaceIndexBuilder() {
     return (factionKey) => _.findIndex(this.state.races, {factionKey});
@@ -85,11 +86,20 @@ class TI4Cheat extends React.Component {
     render() {
         return (
             <Router>
-                <div>
-                    <ButtonBar/>
-                    <Route exact path="/" render={this.renderFactionSelector}/>
-                    <Route path="/factions" render={this.renderFactionList}/>
-                </div>
+                <Route render={({location}) => {
+                    return <div>
+                        <ButtonBar/>
+                        <TransitionGroup>
+                            <CSSTransition key={location.key} classNames="fade" timeout={300}>
+                                <Switch location={location}>
+                                    <Route exact path="/" render={this.renderFactionSelector}/>
+                                    <Route exact path="/factions" render={this.renderFactionList}/>
+                                </Switch>
+                            </CSSTransition>
+                        </TransitionGroup>
+                    </div>
+                }}>
+                </Route>
             </Router>
         )
     }

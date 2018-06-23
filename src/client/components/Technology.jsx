@@ -39,7 +39,7 @@ Technology.propTypes = {
     type : PropTypes.string.isRequired,
     name : PropTypes.string.isRequired,
     requirements: PropTypes.array.isRequired,
-    text : PropTypes.oneOf([PropTypes.string, PropTypes.array]).isRequired
+    text : PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired
 };
 
 module.exports = Technology;
