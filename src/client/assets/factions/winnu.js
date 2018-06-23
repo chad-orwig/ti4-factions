@@ -47,5 +47,5 @@ module.exports = {
         name : 'Acquiescence',
         text : 'At the end of the Strategy Phase: Exchange 2 of your Strategy Cards with a Strategy Card that was chosen by the Winnu player. Then return this card to the Winnu player.'
     },
-    commodities : 4
+    commodities : 3
 };
