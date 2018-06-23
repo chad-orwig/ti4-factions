@@ -33,7 +33,10 @@ module.exports = {
             name : 'Hybrid Crystal Figher II',
             type : 'U',
             requirements : ['G', 'B'],
-            text : 'Combat: 7; Move 2; This unit may move without being transported'
+            text : [
+                'Naalu Fighter (Combat: 7; Move 2)',
+                'This unit may move without being transported'
+            ]
         }
     ],
     promissoryNote : {
