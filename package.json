@@ -9,7 +9,7 @@
     "lint:watch": "npm run lint -- --watch",
     "dev:server": "node src/server/devServer.js",
     "clean-dist": "npm run remove-dist && mkdir src/server/dist",
-    "remove-dist": "rimraf .src/server/dist",
+    "remove-dist": "rimraf ./src/server/dist",
     "build:html": "node src/server/buildHtml.js",
     "prebuild": "npm-run-all lint clean-dist build:html",
     "build": "node src/server/build.js",
