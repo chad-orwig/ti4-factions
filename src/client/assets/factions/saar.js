@@ -35,7 +35,7 @@ module.exports = {
         {
             name : 'Floating Factory II',
             type : 'U',
-            requirements : ['BY'],
+            requirements : ['B','Y'],
             text : [
                 'Saar Space Dock (Move 2, Capacity 5)',
                 'This unit is placed in a space area instead of on a planet. ' +
