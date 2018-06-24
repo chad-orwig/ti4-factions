@@ -1,8 +1,8 @@
 {
-  "name": "ti4cheat",
+  "name": "ti4-factions",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A small application for viewing factions in Twilight Imperium 4",
+  "main": "src/server/devServer.js",
   "scripts": {
     "dev": "ENV=local npm-run-all --parallel dev:server lint:watch",
     "lint": "esw src",
