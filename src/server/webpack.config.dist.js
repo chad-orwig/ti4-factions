@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode: 'production',
     devtool: 'source-map',
@@ -15,7 +16,8 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "styles.css"
-        })
+        }),
+        new CopyWebpackPlugin([{from : './src/client/assets/imgs/favicon.ico', to: __dirname + '/dist'}])
     ],
     module : {
         rules : [

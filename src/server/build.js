@@ -9,7 +9,8 @@ console.log('Generating minified bundle for production via Webpack. This will ta
 
 webpack(webpackConfig).run((err, stats) => {
 	if (err) { // so a fatal error occurred. Stop here.
-		console.log(err.bold.red);
+		const s = typeof err === "string" ? err : JSON.stringify(err, null, 2);
+		console.log(s.bold.red);
 		return 1;
 	}
 
