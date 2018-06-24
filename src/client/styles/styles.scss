@@ -219,6 +219,12 @@ body {
   }
 }
 
+@media (max-width: $breakpoint-2column) {
+  .button-bar {
+    text-align: center;
+  }
+}
+
 @media print {
   .button-bar {
     display: none;

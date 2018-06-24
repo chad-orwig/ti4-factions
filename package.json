@@ -14,7 +14,9 @@
     "prebuild": "npm-run-all lint clean-dist build:html",
     "build": "node src/server/build.js",
     "prestart": "npm run build",
-    "start": "node src/server/distServer.js"
+    "deploy" : "gcloud app deploy --project ti4-factions",
+    "start": "npm run dist:server",
+    "dist:server": "node src/server/distServer.js"
   },
   "author": "",
   "license": "ISC",
