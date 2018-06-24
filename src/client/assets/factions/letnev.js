@@ -28,7 +28,7 @@ module.exports = {
     },
     techs : [
         {
-            name : 'L$ Disruptors',
+            name : 'L4 Disruptors',
             type : 'Y',
             requirements : ['Y'],
             text : 'During an invasion combat, units cannot use Space Canon against your units.'
