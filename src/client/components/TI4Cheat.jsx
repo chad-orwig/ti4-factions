@@ -92,8 +92,8 @@ class TI4Cheat extends React.Component {
                         <TransitionGroup>
                             <CSSTransition key={location.key} classNames="fade" timeout={300}>
                                 <Switch location={location}>
-                                    <Route exact path="/" render={this.renderFactionSelector}/>
                                     <Route exact path="/factions" render={this.renderFactionList}/>
+                                    <Route exact render={this.renderFactionSelector}/>
                                 </Switch>
                             </CSSTransition>
                         </TransitionGroup>

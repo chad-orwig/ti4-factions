@@ -3,7 +3,7 @@ const {withRouter, Link} = require('react-router-dom');
 require('bootstrap/scss/bootstrap.scss');
 
 const ButtonBar = withRouter(({location}) => {
-    const onSelectionPage = location.pathname === "/";
+    const onSelectionPage = location.pathname !== "/factions";
     const selectionButton = onSelectionPage ?
         <span className="nav-button disabled btn btn-primary btn-lg">Selection</span> :
         <Link to="/" className="nav-button btn btn-primary btn-lg">Selection</Link>;
