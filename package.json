@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A small application for viewing factions in Twilight Imperium 4",
   "main": "src/server/devServer.js",
+  "repository": "https://github.com/chad-orwig/ti4-factions",
   "scripts": {
     "dev": "ENV=local npm-run-all --parallel dev:server lint:watch",
     "lint": "esw src",
@@ -14,7 +15,7 @@
     "prebuild": "npm-run-all lint clean-dist build:html",
     "build": "node src/server/build.js",
     "prestart": "npm run build",
-    "deploy" : "gcloud app deploy --project ti4-factions",
+    "deploy": "gcloud app deploy --project ti4-factions",
     "start": "npm run dist:server",
     "dist:server": "node src/server/distServer.js"
   },
