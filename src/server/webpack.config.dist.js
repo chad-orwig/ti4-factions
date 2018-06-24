@@ -1,9 +1,8 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require('path');
 module.exports = {
     mode: 'production',
     devtool: 'source-map',
-    entry: './src/index',
+    entry: './src/client/index.jsx',
     target : 'web',
     output: {
         path       : __dirname + '/dist',
@@ -20,7 +19,9 @@ module.exports = {
     ],
     module : {
         rules : [
-            { test: /\.js$/, include: path.join(__dirname, 'src'), loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
+            { test: /\.jsx$/, loader: 'jsx-loader?insertPragma=React.DOM&harmony'},
+            { test: /\.png/, loader: 'file-loader'},
+            { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file-loader?name=public/fonts/[name].[ext]'},
             { test: /(\.scss)$|(\.css)$/, loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] }
         ]
     }

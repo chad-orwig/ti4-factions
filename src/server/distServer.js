@@ -6,15 +6,12 @@ const compression = require('compression');
 const port = process.env.PORT || 3000;
 const app = express();
 
-//still waiting on a valid cert
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
 app.use(compression());
-app.use(express.static('dist'));
+app.use(express.static('src/server/dist'));
 
 
 app.get('*', function(req, res) {
-	res.sendFile(path.join(__dirname, '../dist/index.html'));
+	res.sendFile(path.join(__dirname, './dist/index.html'));
 });
 
 app.listen(port, function(err) {
@@ -22,6 +19,6 @@ app.listen(port, function(err) {
 		console.log(err);
 	} 
 	else {
-		console.log(`server is litening on port ${port}`);
+		console.log(`server is listening on port ${port}`);
 	}
 });
