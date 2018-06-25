@@ -6,6 +6,7 @@ $grey : #ddd;
 $light-blue: rgba($tech-blue, .65);
 $v-light-blue: rgba($tech-blue, .1);
 
+$breakpoint-mobile : 37.5em;
 $breakpoint-2column : 50em;
 $breakpoint-3column : 75em;
 $breakpoint-4column : 100em;
@@ -219,9 +220,27 @@ body {
   }
 }
 
-@media (max-width: $breakpoint-2column) {
+@media (max-width: $breakpoint-mobile) {
+  .faction-selection-grid {
+    padding-bottom: 5em;
+    .faction-selector {
+      flex : 1 1 100%;
+    }
+  }
+  .faction-list {
+    padding-bottom: 5em;
+  }
   .button-bar {
     text-align: center;
+    position : fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 3;
+  }
+
+  .fade-exit {
+    top : .25em;
   }
 }
 
