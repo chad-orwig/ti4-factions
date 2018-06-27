@@ -20,7 +20,7 @@ function Flagship ({name, cost, combat, move, capacity, abilities}) {
 Flagship.propTypes = {
     name : PropTypes.string.isRequired,
     cost : PropTypes.number.isRequired,
-    combat : PropTypes.oneOfType(PropTypes.number, PropTypes.string).isRequired,
+    combat : PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     move : PropTypes.number.isRequired,
     capacity : PropTypes.number.isRequired,
     abilities : PropTypes.array.isRequired
