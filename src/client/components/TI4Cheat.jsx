@@ -36,27 +36,19 @@ function unselectFactionBuilder() {
 }
 
 function renderFactionListBuilder() {
-    return () => {
-        const selectedFactions = _.filter(this.state.races, "selected")
-            .map(({factionKey}) => factionMap[factionKey]);
-        return (
-            <div>
-                <FactionList factions={selectedFactions}/>
-            </div>
-        );
-    }
+    const selectedFactions = _.filter(this.state.races, "selected")
+        .map(({factionKey}) => factionMap[factionKey]);
+    return (
+            <FactionList factions={selectedFactions}/>
+    );
 }
 
 function renderFactionSelectorBuilder() {
-    return () => (
-        <div>
-            <FactionSelectionGrid
-                races={this.state.races}
-                unselectFunction={this.unselectFaction}
-                selectFunction={this.selectFaction}
-            />
-        </div>
-    );
+    return <FactionSelectionGrid
+            races={this.state.races}
+            unselectFunction={this.unselectFaction}
+            selectFunction={this.selectFaction}
+        />;
 }
 
 function initialState() {
@@ -78,9 +70,9 @@ class TI4Cheat extends React.Component {
         this.selectFaction = selectFactionBuilder.apply(this);
         this.unselectFaction = unselectFactionBuilder.apply(this);
 
-        this.renderFactionList = renderFactionListBuilder.apply(this);
+        this.renderFactionList = renderFactionListBuilder.bind(this);
 
-        this.renderFactionSelector = renderFactionSelectorBuilder.apply(this);
+        this.renderFactionSelector = renderFactionSelectorBuilder.bind(this);
 
     }
 
@@ -99,12 +91,12 @@ class TI4Cheat extends React.Component {
                                     </Switch>
                                 </CSSTransition>
                             </TransitionGroup>
-                        </div>
+                        </div>;
                     }}>
                     </Route>
                 </ScrollToTop>
             </Router>
-        )
+        );
     }
 }
 

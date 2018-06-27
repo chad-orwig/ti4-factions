@@ -4,7 +4,7 @@ const PropTypes = require('prop-types');
 function onClickBuilder(factionAction, faction) {
     return () => {
         factionAction(faction);
-    }
+    };
 }
 
 function FactionSelector({faction, isSelected, factionAction, factionKey}) {
@@ -19,13 +19,14 @@ function FactionSelector({faction, isSelected, factionAction, factionKey}) {
             <img src={faction.img}/>
             <h1>{faction.name}</h1>
         </div>
-    )
+    );
 }
 
 FactionSelector.propTypes = {
     faction : PropTypes.object.isRequired,
     isSelected : PropTypes.bool.isRequired,
-    factionAction : PropTypes.func.isRequired
+    factionAction : PropTypes.func.isRequired,
+    factionKey : PropTypes.string.isRequired
 };
 
 module.exports = FactionSelector;

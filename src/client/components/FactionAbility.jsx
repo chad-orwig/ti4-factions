@@ -1,6 +1,6 @@
 const React = require('react');
 const PropTypes = require('prop-types');
-const SpanOrList = require('./SpanOrList.jsx')
+const SpanOrList = require('./SpanOrList.jsx');
 
 function FactionAbility({name, text}) {
     return (

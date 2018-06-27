@@ -6,7 +6,7 @@
   "repository": "https://github.com/chad-orwig/ti4-factions",
   "scripts": {
     "dev": "ENV=local npm-run-all --parallel dev:server lint:watch",
-    "lint": "esw src",
+    "lint": "esw src --ext .js,.jsx",
     "lint:watch": "npm run lint -- --watch",
     "dev:server": "node src/server/devServer.js",
     "clean-dist": "npm run remove-dist && mkdir src/server/dist",

@@ -6,6 +6,11 @@ const buildFactionAbility = ({name, text}, index) => {
     return <li key={index}><FactionAbility name={name} text={text} key={index}/></li>;
 };
 
+buildFactionAbility.propTypes = {
+    name : PropTypes.string.isRequired,
+    text : PropTypes.string.isRequired
+};
+
 function FactionAbilities({abilities}) {
     const factionAbilities = abilities.map(buildFactionAbility);
 

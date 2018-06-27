@@ -1,4 +1,5 @@
 const React = require('react');
+const PropTypes = require('prop-types');
 const _ = require('lodash');
 const FactionSelector = require('./FactionSelector.jsx');
 const {factionMap} = require('../assets/factions');
@@ -11,7 +12,7 @@ function renderFactionSelector(factionAction, isSelected, factionKey) {
         faction={faction}
         isSelected={isSelected}
         factionAction={factionAction}
-    />
+    />;
 }
 
 function FactionSelectionGrid({races, selectFunction, unselectFunction}) {
@@ -27,5 +28,11 @@ function FactionSelectionGrid({races, selectFunction, unselectFunction}) {
         </div>
     );
 }
+
+FactionSelectionGrid.propTypes = {
+    races : PropTypes.array.isRequired,
+    selectFunction : PropTypes.func.isRequired,
+    unselectFunction : PropTypes.func.isRequired
+};
 
 module.exports = FactionSelectionGrid;

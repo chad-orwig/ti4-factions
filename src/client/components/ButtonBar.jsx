@@ -16,7 +16,7 @@ const ButtonBar = withRouter(({location}) => {
            {selectionButton}
            {detailsButton}
        </div>
-   )
+   );
 });
 
 module.exports = ButtonBar;

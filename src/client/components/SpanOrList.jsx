@@ -6,14 +6,14 @@ function listBuilder(text) {
         <ul>
             {lis}
         </ul>
-    )
+    );
 }
 
 function SpanOrList({text}) {
     if (Array.isArray(text)) {
         return listBuilder(text);
     }
-    return <p>{text}</p>
+    return <p>{text}</p>;
 }
 
 SpanOrList.propTypes = {

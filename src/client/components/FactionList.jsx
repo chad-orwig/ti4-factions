@@ -24,7 +24,7 @@ function FactionList({factions}) {
                 <h1>No Factions Selected</h1>
                 <h2><Link to="/">Select some factions first</Link></h2>
             </div>
-        )
+        );
     }
 
     const factionElements = factions.map(factionBuilder);

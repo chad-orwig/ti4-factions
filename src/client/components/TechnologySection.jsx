@@ -12,6 +12,13 @@ function technologyBuilder({name, type, requirements, text}, index) {
     );
 }
 
+technologyBuilder.propTypes = {
+    name : PropTypes.string.isRequired,
+    type : PropTypes.string.isRequired,
+    requirements: PropTypes.array.isRequired,
+    text : PropTypes.string.isRequired
+};
+
 function TechnologySection({techs}) {
     const technologyElements = techs.map(technologyBuilder);
     return (
