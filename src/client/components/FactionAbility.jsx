@@ -13,7 +13,7 @@ function FactionAbility({name, text}) {
 
 FactionAbility.propTypes = {
     name : PropTypes.string.isRequired,
-    text : PropTypes.string.isRequired
+    text : PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired
 };
 
 module.exports = FactionAbility;
