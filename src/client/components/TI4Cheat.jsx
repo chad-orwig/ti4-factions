@@ -31,7 +31,7 @@ class TI4Cheat extends React.Component {
 
     static renderFactionListBuilder(location) {
         return () => {
-            const selectedFactions = qs.parse(location.search).factions
+            const selectedFactions = (qs.parse(location.search).factions || [])
                 .map((factionKey) => factionMap[factionKey]);
             return (
                 <FactionList factions={selectedFactions}/>
