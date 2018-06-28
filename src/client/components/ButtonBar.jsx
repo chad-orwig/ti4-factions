@@ -9,7 +9,7 @@ const ButtonBar = withRouter(({location, races}) => {
         .map(r=>r.factionKey);
     const queryString = qs.stringify({
         factions : selectedRaces
-    });
+    }, {arrayFormat: 'bracket'});
     const onSelectionPage = location.pathname !== "/factions";
     const selectionButton = onSelectionPage ?
         <span className="nav-button disabled btn btn-primary btn-lg">Selection</span> :

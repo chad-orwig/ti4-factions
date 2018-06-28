@@ -18,7 +18,7 @@ function factionBuilder(faction, index) {
     );
 }
 function FactionList({factions}) {
-    if(factions.length === 0) {
+    if(!Array.isArray(factions) || factions.length === 0) {
         return (
             <div style={{padding: '20px'}}>
                 <h1>No Factions Selected</h1>
