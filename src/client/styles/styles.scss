@@ -189,6 +189,10 @@ body {
 
 }
 
+.error-panel {
+  padding: 20px;
+}
+
 @media (min-width: $breakpoint-2column) {
   .faction-list {
     display: flex;
