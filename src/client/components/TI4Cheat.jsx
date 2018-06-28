@@ -7,72 +7,65 @@ const ButtonBar = require('./ButtonBar.jsx');
 const _ = require('lodash');
 const ScrollToTop = require('./ScrollToTop.jsx');
 const { BrowserRouter:Router, Route, Switch} = require('react-router-dom');
+const qs = require('query-string');
 
-function findRaceIndexBuilder() {
-    return (factionKey) => _.findIndex(this.state.races, {factionKey});
-}
+class TI4Cheat extends React.Component {
 
-function selectFactionBuilder() {
-    return (factionKey) => {
-        const raceIndex = this.findRaceIndex(factionKey);
-        if(raceIndex >= 0) {
-            const races = [...this.state.races];
-            races[raceIndex] = Object.assign({}, races[raceIndex], {selected : true });
-            this.setState({races});
-        }
-    };
-}
+    static initialState() {
+        const races = Object.keys(factionMap).map(
+            factionKey => { return {factionKey}; }
+        );
+        const sortedRaces = _.sortBy(races, "factionKey");
+        return {
+            races : sortedRaces
+        };
+    }
 
+    static renderFactionSelector() {
+        return <FactionSelectionGrid
+            races={this.state.races}
+            unselectFunction={this.unselectFaction}
+            selectFunction={this.selectFaction}
+        />;
+    }
 
-function unselectFactionBuilder() {
-    return (factionKey) => {
+    static renderFactionListBuilder(location) {
+        return () => {
+            const selectedFactions = qs.parse(location.search).factions
+                .map((factionKey) => factionMap[factionKey]);
+            return (
+                <FactionList factions={selectedFactions}/>
+            );
+        };
+    }
+    static unselectFaction (factionKey) {
         const raceIndex = this.findRaceIndex(factionKey);
         if(raceIndex >= 0) {
             const races = [...this.state.races];
             races[raceIndex] = Object.assign({}, races[raceIndex], {selected : false});
             this.setState({races});
         }
-    };
-}
-
-function renderFactionListBuilder() {
-    const selectedFactions = _.filter(this.state.races, "selected")
-        .map(({factionKey}) => factionMap[factionKey]);
-    return (
-            <FactionList factions={selectedFactions}/>
-    );
-}
-
-function renderFactionSelectorBuilder() {
-    return <FactionSelectionGrid
-            races={this.state.races}
-            unselectFunction={this.unselectFaction}
-            selectFunction={this.selectFaction}
-        />;
-}
-
-function initialState() {
-    const races = Object.keys(factionMap).map(
-        factionKey => { return {factionKey}; }
-    );
-    const sortedRaces = _.sortBy(races, "factionKey");
-    return {
-        races : sortedRaces
-    };
-}
-
-class TI4Cheat extends React.Component {
+    }
+    static findRaceIndex (factionKey) {
+        return _.findIndex(this.state.races, {factionKey});
+    }
+    static selectFaction (factionKey) {
+        const raceIndex = this.findRaceIndex(factionKey);
+        if(raceIndex >= 0) {
+            const races = [...this.state.races];
+            races[raceIndex] = Object.assign({}, races[raceIndex], {selected : true });
+            this.setState({races});
+        }
+    }
     constructor() {
         super();
 
-        this.state = initialState();
-        this.findRaceIndex = findRaceIndexBuilder.apply(this);
-        this.selectFaction = selectFactionBuilder.apply(this);
-        this.unselectFaction = unselectFactionBuilder.apply(this);
+        this.state = TI4Cheat.initialState();
+        this.selectFaction = TI4Cheat.selectFaction.bind(this);
+        this.findRaceIndex = TI4Cheat.findRaceIndex.bind(this);
+        this.unselectFaction = TI4Cheat.unselectFaction.bind(this);
 
-        this.renderFactionList = renderFactionListBuilder.bind(this);
-
-        this.renderFactionSelector = renderFactionSelectorBuilder.bind(this);
+        this.renderFactionSelector = TI4Cheat.renderFactionSelector.bind(this);
 
     }
 
@@ -82,11 +75,11 @@ class TI4Cheat extends React.Component {
                 <ScrollToTop>
                     <Route render={({location}) => {
                         return <div>
-                            <ButtonBar/>
+                            <ButtonBar races={this.state.races}/>
                             <TransitionGroup>
                                 <CSSTransition key={location.key} classNames="fade" timeout={300}>
                                     <Switch location={location}>
-                                        <Route exact path="/factions" render={this.renderFactionList}/>
+                                        <Route exact path="/factions" render={TI4Cheat.renderFactionListBuilder(location)}/>
                                         <Route exact render={this.renderFactionSelector}/>
                                     </Switch>
                                 </CSSTransition>
