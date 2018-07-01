@@ -5,7 +5,9 @@ const FactionAbilities = require('./FactionAbilities.jsx');
 const Unit = require('./Unit.jsx');
 const TechnologySection = require('./TechnologySection.jsx');
 const PromissoryNote = require('./PromissoryNote.jsx');
-function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities}) {
+const SpecialUnit = require('./SpecialUnit.jsx');
+function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities, specialUnits}) {
+    const footer = specialUnits ? specialUnits.map( (u, index) => <SpecialUnit key={index} unit={u} />) : '';
     return (
         <div className="faction">
             <FactionHeader name={name} img={img} commodities={commodities}/>
@@ -20,6 +22,7 @@ function Faction({name, img, abilities, flagship, techs, promissoryNote, commodi
                 abilities={flagship.abilities} />
             <TechnologySection techs={techs}/>
             <PromissoryNote name={promissoryNote.name} text={promissoryNote.text}/>
+            {footer}
         </div>
     );
 }
@@ -31,7 +34,8 @@ Faction.propTypes = {
     techs : PropTypes.array.isRequired,
     promissoryNote : PropTypes.object.isRequired,
     img : PropTypes.string.isRequired,
-    commodities : PropTypes.number.isRequired
+    commodities : PropTypes.number.isRequired,
+    specialUnits : PropTypes.array
 };
 
 module.exports = Faction;

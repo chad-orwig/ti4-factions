@@ -51,5 +51,21 @@ module.exports = {
         ' Strategy Pool, if able, and return it to his reinforcements; then, you may place 2 ' +
         'infantry from your reinforcements on any planet you control.'
     },
-    commodities : 4
+    commodities : 4,
+    specialUnits : [
+        {
+            name : 'Spec Ops',
+            replaces : 'Infantry',
+            cost : .5,
+            combat : 7
+        },
+        {
+            name : 'Advanced Carrier',
+            replaces : 'Carrier',
+            cost : 3,
+            combat : 9,
+            move : 1,
+            capacity : 6
+        }
+    ]
 };

@@ -43,5 +43,10 @@ module.exports = {
         name : 'Gift of Prescience',
         text : 'At the end of the Strategy Phase: Place this card face up in your play area and place the Naalu "0" token on your Strategy Card; you are first in initiative order; the Naalu player cannot use his Telepathic faction ability during this game round. Return this card to the Naalu player at the end of the Status Phase.'
     },
-    commodities : 3
+    commodities : 3,
+    specialUnits : [{
+        name : 'Hybrid Crystal Fighter',
+        cost : .5,
+        combat : 8
+    }]
 };

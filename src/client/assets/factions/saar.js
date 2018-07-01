@@ -60,5 +60,15 @@ module.exports = {
         'Ground Forces from that planet and place them on a planet controlled by the Saar player. ' +
         'Then, return this card to the Saar player.'
     },
-    commodities : 3
+    commodities : 3,
+    specialUnits : [{
+        name : 'Floating Factory',
+        replaces : 'Space Dock',
+        move : 1,
+        capacity : 4,
+        abilities: [
+            'This unit is placed in a space area instead of on a planet. This unit can move and retreat as if it were a ship. If this unit is blockaded, it is destroyed.',
+            'Production 5'
+        ]
+    }]
 };

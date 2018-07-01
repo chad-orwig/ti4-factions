@@ -17,7 +17,7 @@ function Unit({name, cost, combat, move, capacity, abilities }) {
 Unit.propTypes = {
     name : string.isRequired,
     cost : number,
-    combat : oneOfType(string, number),
+    combat : oneOfType([string, number]),
     move : number,
     capacity: number,
     abilities : array

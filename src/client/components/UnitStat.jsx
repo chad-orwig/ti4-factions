@@ -13,7 +13,7 @@ function UnitStat({type, value}) {
 
 UnitStat.propTypes = {
     type : string.isRequired,
-    value : oneOfType(string, number)
+    value : oneOfType([string, number])
 };
 
 module.exports = UnitStat;

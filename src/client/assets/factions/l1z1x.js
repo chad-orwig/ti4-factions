@@ -51,5 +51,17 @@ module.exports = {
         'and return it to his reinforcements; then, place 1 Command Token from your reinforcements ' +
         'in your strategy pool. Then, return this card to the L1X1X player'
     },
-    commodities : 2
+    commodities : 2,
+    specialUnits : [{
+        name : 'Super-Dreadnought',
+        replaces : 'Dreadnought',
+        cost : 4,
+        combat : 5,
+        move : 1,
+        capacity : 2,
+        abilities: [
+            'Sustain Damage',
+            'Bombardment 5'
+        ]
+    }]
 };

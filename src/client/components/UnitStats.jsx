@@ -15,7 +15,7 @@ function UnitStats({ cost, combat, move, capacity}) {
 
 UnitStats.propTypes = {
     cost : number,
-    combat : oneOfType(string, number),
+    combat : oneOfType([string, number]),
     move : number,
     capacity : number
 };

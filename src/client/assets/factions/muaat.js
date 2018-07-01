@@ -50,5 +50,17 @@ module.exports = {
         name : 'Fires of the Gashlai',
         text : 'ACTION: Remove 1 Command Token from the Muaat player\'s fleet pool and return it to his reinforcements; then, gain your war sun unit upgrade technology card. Then return this card to the Muaat player.'
     },
-    commodities : 4
+    commodities : 4,
+    specialUnits : [{
+        name : 'Prototype War Sun',
+        cost : 12,
+        combat : '3[x3]',
+        move : 1,
+        capacity : 6,
+        abilities: [
+            'Other players\' units in this system lose the Planetary Shield ability',
+            'Sustain Damage',
+            'Bombardment 3 (x3)'
+        ]
+    }]
 };

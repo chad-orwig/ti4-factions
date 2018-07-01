@@ -46,5 +46,17 @@ module.exports = {
         'apply -1 to the result of each of his unit\'s combat rolls during this combat. ' +
         'Then return this card to the N\'orr player.'
     },
-    commodities : 3
+    commodities : 3,
+    specialUnits : [{
+        name : 'Exotrireme',
+        replaces : 'Dreadnought',
+        cost : 4,
+        combat : 5,
+        move : 1,
+        capacity : 1,
+        abilities: [
+            'Sustain Damage',
+            'Bombardment 4 (x2)'
+        ]
+    }]
 };

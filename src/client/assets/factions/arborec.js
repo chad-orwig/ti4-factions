@@ -36,5 +36,14 @@ module.exports = {
         name : 'Stymie',
         text : 'ACTION: Place this card faceup in your play area. While this card is in your play area, the Arborec player cannot produce units in or adjacent to a non-Home System that contains 1 or more of your units. If you activate a system that contains 1 or more of the Arborec player\'s units, return this card to the Arborec.'
     },
-    commodities : 3
+    commodities : 3,
+    specialUnits : [{
+        name : 'Letani Warrior',
+        replaces : 'Infantry',
+        cost : .5,
+        combat : 8,
+        abilities: [
+            'Production 1'
+        ]
+    }]
 };

@@ -14,6 +14,7 @@ function factionBuilder(faction, index) {
             img={faction.img}
             flagship={faction.flagship}
             commodities={faction.commodities}
+            specialUnits={faction.specialUnits}
         />
     );
 }
