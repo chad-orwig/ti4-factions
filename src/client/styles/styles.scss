@@ -193,6 +193,40 @@ body {
   padding: 20px;
 }
 
+.unit {
+  background-color: rgba(white, .45);
+  border : 3px solid $light-blue;
+  border-radius: .3em;
+  padding: 5px;
+  margin : 5px;
+  .unit-stats {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+    .unit-stat {
+      border : 1px solid black;
+      border-radius: .3em;
+      padding: 5px;
+      width: 6.5em;
+      min-height: 6.5em;
+      flex : 0 1 auto;
+      h3 {
+        font-size: 100%;
+        font-style: italic;
+      }
+      h2 {
+        font-size: 250%;
+        text-align: center;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 5px;
+  }
+}
+
 @media (min-width: $breakpoint-2column) {
   .faction-list {
     display: flex;
