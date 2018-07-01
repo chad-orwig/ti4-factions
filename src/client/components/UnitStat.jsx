@@ -5,8 +5,8 @@ function UnitStat({type, value}) {
     const safeValue = value || "-";
     return (
         <div className="unit-stat">
-            <h3 className="type" >{type}</h3>
             <h2 className="value" >{safeValue}</h2>
+            <h3 className="type" >{type}</h3>
         </div>
     );
 }
