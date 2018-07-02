@@ -53,6 +53,7 @@ module.exports = {
     commodities : 4,
     specialUnits : [{
         name : 'Prototype War Sun',
+        replaces : 'War Sun',
         cost : 12,
         combat : '3[x3]',
         move : 1,

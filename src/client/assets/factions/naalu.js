@@ -46,6 +46,7 @@ module.exports = {
     commodities : 3,
     specialUnits : [{
         name : 'Hybrid Crystal Fighter',
+        replaces : 'Fighter',
         cost : .5,
         combat : 8
     }]
