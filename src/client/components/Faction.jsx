@@ -6,8 +6,9 @@ const Unit = require('./Unit.jsx');
 const TechnologySection = require('./TechnologySection.jsx');
 const PromissoryNote = require('./PromissoryNote.jsx');
 const SpecialUnit = require('./SpecialUnit.jsx');
-function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities, specialUnits}) {
-    const footer = specialUnits ? specialUnits.map( (u, index) => <SpecialUnit key={index} unit={u} />) : '';
+const Start = require('./Start.jsx');
+function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities, specialUnits, start}) {
+    const specialUnitSection = specialUnits ? specialUnits.map( (u, index) => <SpecialUnit key={index} unit={u} />) : '';
     return (
         <div className="faction">
             <FactionHeader name={name} img={img} commodities={commodities}/>
@@ -20,9 +21,10 @@ function Faction({name, img, abilities, flagship, techs, promissoryNote, commodi
                 move={flagship.move}
                 capacity={flagship.capacity}
                 abilities={flagship.abilities} />
+            {specialUnitSection}
             <TechnologySection techs={techs}/>
             <PromissoryNote name={promissoryNote.name} text={promissoryNote.text}/>
-            {footer}
+            <Start tech={start.tech} units={start.units} />
         </div>
     );
 }

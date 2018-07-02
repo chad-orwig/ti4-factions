@@ -15,6 +15,7 @@ function factionBuilder(faction, index) {
             flagship={faction.flagship}
             commodities={faction.commodities}
             specialUnits={faction.specialUnits}
+            start={faction.start}
         />
     );
 }

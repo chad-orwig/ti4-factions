@@ -206,6 +206,7 @@ body {
 
     .unit-stat {
       border : 1px solid black;
+      margin-bottom: 5px;
       border-radius: .3em;
       padding-top: 5px;
       width: 6.5em;
@@ -233,6 +234,44 @@ body {
 
   ul {
     margin-top: 5px;
+  }
+}
+
+.start-situation {
+  .start-content {
+    display: flex;
+    flex-flow: row wrap;
+    ul {
+      border : 1px solid black;
+    }
+    .starting-tech {
+      flex : 1 0 10em;
+      padding: 0 30px;
+      max-width: 20em;
+      .B {
+        color : $tech-blue;
+      }
+      .G {
+        color: $tech-green;
+      }
+      .Y {
+        color: $tech-yellow
+      }
+      .R {
+        color: $tech-red
+      }
+    }
+    .starting-units {
+      flex : 1 1 50%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      li {
+        flex : 0 0 50%;
+        min-width: 6em;
+        max-width: 10em;
+      }
+    }
   }
 }
 
