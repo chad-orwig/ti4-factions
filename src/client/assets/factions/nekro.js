@@ -50,5 +50,24 @@ module.exports = {
         'IF you activate a system that contains 1 or more of the Nekro player\'s units, ' +
         'return this card to the Nekro player.'
     },
-    commodities : 3
+    commodities : 3,
+    start : {
+        tech : {
+            'Daxcive Animators' : 'G',
+            'Velefar Assimilator X/Y' : 'W'
+        },
+        units : [
+            '1 Dreadnought',
+            '1 Carrier',
+            '1 Cruiser',
+            '2 Fighters',
+            '2 Infantry',
+            '1 Space Dock'
+        ],
+        home : [{
+            name : 'Mordai II',
+            resource : 4,
+            influence : 0
+        }]
+    }
 };

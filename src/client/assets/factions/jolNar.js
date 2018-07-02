@@ -49,5 +49,34 @@ module.exports = {
         text : 'After the Jol-Nar player researches a technology that is not a faction technology: ' +
         'Gain that technology. Then, return this card to the Jol-Nar player.'
     },
-    commodities : 4
+    commodities : 4,
+    start : {
+        tech : {
+            'Neural Motivator' : 'G',
+            'Antimass Deflectors' : 'B',
+            'Sarween Tools' : 'Y',
+            'Plasma Scoring' : 'R'
+        },
+        units : [
+            '1 Dreadnought',
+            '2 Carriers',
+            '1 Fighter',
+            '2 Infantry',
+            '1 Space Dock',
+            '2 PDS'
+        ],
+        home : [
+            {
+                name : 'Jol',
+                resource : 1,
+                influence : 2
+            },
+            {
+                name : 'Nar',
+                resource : 2,
+                influence : 3
+            }
+        ]
+
+    }
 };

@@ -63,5 +63,24 @@ module.exports = {
             'Sustain Damage',
             'Bombardment 5'
         ]
-    }]
+    }],
+    start : {
+        tech : {
+            'Neural Motivator' : 'G',
+            'Plasma Scoring' : 'R'
+        },
+        units : [
+            '1 Dreadnought',
+            '1 Carrier',
+            '3 Fighters',
+            '5 Infantry',
+            '1 Space Dock',
+            '1 PDS'
+        ],
+        home : [{
+            name : '[0.0.0]',
+            resource : 5,
+            influence : 0
+        }]
+    }
 };

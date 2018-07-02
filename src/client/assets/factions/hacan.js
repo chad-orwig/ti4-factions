@@ -49,5 +49,35 @@ module.exports = {
         'you may negotiate transactions with players who are not your neighbor. If you activate a ' +
         'system that contains 1 or more of the Hacan player\'s units, return this card to the Hacan player'
     },
-    commodities : 6
+    commodities : 6,
+    start : {
+        tech : {
+            'Antimass Deflectors' : 'B',
+            'Sarween Tools' : 'Y'
+        },
+        units : [
+            '2 Carriers',
+            '1 Cruiser',
+            '2 Fighters',
+            '4 Infantry',
+            '1 Space Dock'
+        ],
+        home : [
+            {
+                name: 'Hercant',
+                resource : 1,
+                influence : 1
+            },
+            {
+                name : 'Arretze',
+                resource : 2,
+                influence : 0
+            },
+            {
+                name : 'Kamdorn',
+                resource : 0,
+                influence : 1
+            }
+        ]
+    }
 };

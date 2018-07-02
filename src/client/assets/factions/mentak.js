@@ -48,5 +48,24 @@ module.exports = {
         'If you activate a system that contains 2 or more of the Mentak player\'s units, ' +
         'return this card to the Mentak player.'
     },
-    commodities : 2
+    commodities : 2,
+    start : {
+        tech : {
+            'Sarween Tools' : 'Y',
+            'Plasma Scoring': 'R'
+        },
+        units: [
+            '1 Carrier',
+            '2 Cruisers',
+            '3 Fighters',
+            '4 Infantry',
+            '1 Space Dock',
+            '1 PDS'
+        ],
+        home : [{
+            name : 'Moll Primus',
+            resource : 4,
+            influence : 1
+        }]
+    }
 };

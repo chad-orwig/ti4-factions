@@ -47,5 +47,23 @@ module.exports = {
         name : 'Acquiescence',
         text : 'At the end of the Strategy Phase: Exchange 2 of your Strategy Cards with a Strategy Card that was chosen by the Winnu player. Then return this card to the Winnu player.'
     },
-    commodities : 3
+    commodities : 3,
+    start : {
+        tech : {
+            'Choose any 1 technology that has no prerequisites.' : 'W'
+        },
+        units : [
+            '1 Carrier',
+            '1 Cruiser',
+            '2 Fighters',
+            '2 Infantry',
+            '1 Space Dock',
+            '1 PDS'
+        ],
+        home : [{
+            name : 'Winnu',
+            resource : 3,
+            influence : 4
+        }]
+    }
 };

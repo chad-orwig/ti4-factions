@@ -45,5 +45,23 @@ module.exports = {
         abilities: [
             'Production 1'
         ]
-    }]
+    }],
+    start : {
+        tech : {
+            'Magen Defense Grid' : 'R'
+        },
+        units : [
+            '1 Carrier',
+            '1 Cruiser',
+            '2 Fighters',
+            '4 Infantry',
+            '1 Space Dock',
+            '1 PDS'
+        ],
+        home : [{
+            name : 'Nestphar',
+            resource : 3,
+            influence : 2
+        }]
+    }
 };

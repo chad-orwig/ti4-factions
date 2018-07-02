@@ -45,5 +45,20 @@ module.exports = {
         name : 'Creuss Iff',
         text : 'At the start of your turn during the Action Phase: Place or move a Creuss wormhole token in to either a system that contains a planet you control or a non-Home System that does not contain another player\'s ships. Then, return this card to the Creuss player.'
     },
-    commodities : 4
+    commodities : 4,
+    tech : {
+        'Gravity Drive' : 'B'
+    },
+    units : [
+        '1 Carrier',
+        '2 Destroyers',
+        '2 Fighters',
+        '4 Infantry',
+        '1 Space Dock'
+    ],
+    home : [{
+        name : 'Creuss',
+        resource : 4,
+        influence : 2
+    }]
 };

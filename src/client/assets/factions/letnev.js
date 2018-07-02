@@ -45,5 +45,31 @@ module.exports = {
         text : 'At the start of a round of space combat: the Letnev player loses 2 Trade Goods. ' +
         'During this combat round, reroll any number of your dice. Then, return this card to the Letnev player.'
     },
-    commodities : 2
+    commodities : 2,
+    start : {
+        tech : {
+            'Antimass Deflectors' : 'B',
+            'Plasma Scoring' : 'R'
+        },
+        units : [
+            '1 Dreadnought',
+            '1 Carrier',
+            '1 Destroyer',
+            '1 Fighter',
+            '3 Infantry',
+            '1 Space Dock'
+        ],
+        home : [
+            {
+                name : 'Arc Prime',
+                resource : 4,
+                influence : 0
+            },
+            {
+                name : 'Wren Terra',
+                resource : 2,
+                influence : 1
+            }
+        ]
+    }
 };

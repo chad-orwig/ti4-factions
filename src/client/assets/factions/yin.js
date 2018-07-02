@@ -49,5 +49,24 @@ module.exports = {
         text : 'After a system is activated: The Yin player cannot use faction abilities or faction ' +
         'technology during this tactical action. Then, return this card to the Yin player.'
     },
-    commodities : 2
+    commodities : 2,
+    start : {
+        home : [
+            {
+                name : 'Darien',
+                resource : 4,
+                influence : 4
+            }
+        ],
+        tech : {
+            'Sarween Tools' : 'Y'
+        },
+        units : [
+            '2 Carriers',
+            '1 Destroyer',
+            '4 Fighters',
+            '4 Infantry',
+            '1 Space Dock'
+        ]
+    }
 };

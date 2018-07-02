@@ -49,5 +49,32 @@ module.exports = {
         replaces : 'Fighter',
         cost : .5,
         combat : 8
-    }]
+    }],
+    start : {
+        tech : {
+            'Neural Motivator' : 'G',
+            'Sarween Tools' : 'Y'
+        },
+        units : [
+            '1 Carrier',
+            '1 Cruiser',
+            '1 Destroyer',
+            '3 Fighters',
+            '4 Infantry',
+            '1 Space Dock',
+            '1 PDS'
+        ],
+        home : [
+            {
+                name : 'Druaa',
+                resource : 3,
+                influence : 1
+            },
+            {
+                name : 'Maaluuk',
+                resource : 0,
+                influence : 2
+            }
+        ]
+    }
 };

@@ -58,5 +58,27 @@ module.exports = {
             'Sustain Damage',
             'Bombardment 4 (x2)'
         ]
-    }]
+    }],
+    start : {
+        tech : {},
+        units : [
+            '2 Carrier',
+            '1 Cruiser',
+            '5 Infantry',
+            '1 Space Dock',
+            '1 PDS'
+        ],
+        home : [
+            {
+                name : "Tren'Lak",
+                resource : 1,
+                influence : 0
+            },
+            {
+                name : 'Quinarra',
+                resource : 3,
+                influence : 1
+            }
+        ]
+    }
 };

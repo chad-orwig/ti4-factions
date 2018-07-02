@@ -46,5 +46,30 @@ module.exports = {
         name : 'Spy Net',
         text : 'At the start of your turn: Look at the Yssairl player\'s hand of action cards. Choose 1 of those cards and add it to your hand. Then return this card to the Yssaril player.'
     },
-    commodities : 3
+    commodities : 3,
+    start : {
+        tech : {
+            'Neural Motivator' : 'G'
+        },
+        units : [
+            '2 Carriers',
+            '1 Cruiser',
+            '2 Fighters',
+            '5 Infantry',
+            '1 Space Dock',
+            '1 PDS'
+        ],
+        home : [
+            {
+                name : 'Retillion',
+                resource : 2,
+                influence : 3
+            },
+            {
+                name : 'Shalloq',
+                resource : 1,
+                influence : 2
+            }
+        ]
+    }
 };

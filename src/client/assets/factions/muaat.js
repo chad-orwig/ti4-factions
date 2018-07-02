@@ -63,5 +63,21 @@ module.exports = {
             'Sustain Damage',
             'Bombardment 3 (x3)'
         ]
-    }]
+    }],
+    start : {
+        tech : {
+            'Plasma Scoring' : 'R'
+        },
+        units : [
+            '1 War Sun',
+            '2 Fighters',
+            '4 Infantry',
+            '1 Space Dock'
+        ],
+        home : [{
+            name : 'Muuat',
+            resource : 4,
+            influence : 1
+        }]
+    }
 };

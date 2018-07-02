@@ -49,5 +49,30 @@ module.exports = {
         'to his reinforcements; then, discard the revealed agenda and reveal 1 agenda ' +
         'from the top of the deck; players vote on this agenda instead. Then, return this card to the Xxcha player.'
     },
-    commodities : 4
+    commodities : 4,
+    start : {
+        home : [
+            {
+                name : 'Archon Wren',
+                resource : 2,
+                influence : 3
+            },
+            {
+                name : 'Archon Tau',
+                resource : 1,
+                influence : 1
+            }
+        ],
+        tech : {
+            'Graviton Laser System' : 'Y'
+        },
+        units : [
+            '1 Carrier',
+            '2 Cruisers',
+            '3 Fighters',
+            '4 Infantry',
+            '1 Space Dock',
+            '1 PDS'
+        ]
+    }
 };

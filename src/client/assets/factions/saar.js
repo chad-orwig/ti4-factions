@@ -70,5 +70,29 @@ module.exports = {
             'This unit is placed in a space area instead of on a planet. This unit can move and retreat as if it were a ship. If this unit is blockaded, it is destroyed.',
             'Production 5'
         ]
-    }]
+    }],
+    start : {
+        tech : {
+            'Antimass Deflectors' : 'B'
+        },
+        units : [
+            '2 Carriers',
+            '1 Cruiser',
+            '2 Fighters',
+            '4 Infantry',
+            '1 Space Dock'
+        ],
+        home : [
+            {
+                name : 'Lisis II',
+                resource : 1,
+                influence : 0
+            },
+            {
+                name : 'Ragh',
+                resource : 2,
+                influence : 1
+            }
+        ]
+    }
 };

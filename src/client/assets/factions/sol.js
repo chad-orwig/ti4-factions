@@ -67,5 +67,26 @@ module.exports = {
             move : 1,
             capacity : 6
         }
-    ]
+    ],
+    start : {
+        home : [
+            {
+                name : 'Jord',
+                resource : 4,
+                influence : 2
+            }
+        ],
+        tech : {
+            'Neural Motivator' : 'G',
+            'Antimass Deflectors' : 'B'
+        },
+        units : [
+            '2 Carriers',
+            '1 Destroyer',
+            '3 Fighters',
+            '5 Infantry',
+            '1 Space Dock'
+        ]
+
+    }
 };
