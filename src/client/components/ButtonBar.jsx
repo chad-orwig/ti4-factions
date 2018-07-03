@@ -2,7 +2,6 @@ const React = require('react');
 const {withRouter, Link} = require('react-router-dom');
 const _ = require('lodash');
 const qs = require('query-string');
-require('bootstrap/scss/bootstrap.scss');
 
 const ButtonBar = withRouter(({location, races}) => {
     const selectedRaces = _.filter(races, "selected")
