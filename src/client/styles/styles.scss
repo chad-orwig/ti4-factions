@@ -266,9 +266,11 @@ body {
   display : flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  .planet {
+    width: 150px;
+  }
 }
 .planet-img {
-  width: 150px;
   .resource {
     fill : $tech-yellow;
     stroke: $tech-yellow;
