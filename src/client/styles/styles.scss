@@ -275,7 +275,7 @@ body {
     stroke: $tech-yellow;
     font-size: 30px;
     &.semi {
-      fill-opacity: .3;
+      fill: lighten($tech-yellow, 40%);
     }
   }
   .influence {
@@ -283,7 +283,7 @@ body {
     stroke: $tech-blue;
     font-size: 30px;
     &.semi {
-      fill-opacity: .3;
+      fill: lighten($tech-blue, 40%)
     }
   }
 }
