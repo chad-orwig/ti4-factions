@@ -266,7 +266,9 @@ body {
   flex-flow: row wrap;
   justify-content: space-around;
   .planet {
-    width: 150px;
+    flex: 1 1 auto;
+    min-width: 100px;
+    max-width: 150px;
   }
 }
 .planet-img {
