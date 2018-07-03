@@ -39,7 +39,8 @@ Faction.propTypes = {
     promissoryNote : PropTypes.object.isRequired,
     img : PropTypes.string.isRequired,
     commodities : PropTypes.number.isRequired,
-    specialUnits : PropTypes.array
+    specialUnits : PropTypes.array,
+    start: PropTypes.object.isRequired
 };
 
 module.exports = Faction;
