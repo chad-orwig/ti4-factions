@@ -291,7 +291,7 @@ body {
 .start-situation {
   .start-content {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     ul {
       border : 1px solid black;
     }
