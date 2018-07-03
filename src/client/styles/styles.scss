@@ -332,6 +332,10 @@ body {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
+  &:active {
+    background-color: #0062cc;
+    border-color: #005cbf;
+  }
   &.disabled {
     color: #fff;
     background-color: #007bff;
