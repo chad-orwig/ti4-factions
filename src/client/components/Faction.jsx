@@ -7,6 +7,7 @@ const TechnologySection = require('./TechnologySection.jsx');
 const PromissoryNote = require('./PromissoryNote.jsx');
 const SpecialUnit = require('./SpecialUnit.jsx');
 const Start = require('./Start.jsx');
+const HomeSystem = require('./HomeSystem.jsx');
 function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities, specialUnits, start}) {
     const specialUnitSection = specialUnits ? specialUnits.map( (u, index) => <SpecialUnit key={index} unit={u} />) : '';
     return (
@@ -25,6 +26,7 @@ function Faction({name, img, abilities, flagship, techs, promissoryNote, commodi
             <TechnologySection techs={techs}/>
             <PromissoryNote name={promissoryNote.name} text={promissoryNote.text}/>
             <Start tech={start.tech} units={start.units} />
+            <HomeSystem planets={start.home}/>
         </div>
     );
 }

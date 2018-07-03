@@ -236,6 +236,30 @@ body {
     margin-top: 5px;
   }
 }
+.planet-container {
+  display : flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.planet-img {
+  width: 150px;
+  .resource {
+    fill : $tech-yellow;
+    stroke: $tech-yellow;
+    font-size: 30px;
+    &.semi {
+      fill-opacity: .3;
+    }
+  }
+  .influence {
+    fill : $tech-blue;
+    stroke: $tech-blue;
+    font-size: 30px;
+    &.semi {
+      fill-opacity: .3;
+    }
+  }
+}
 
 .start-situation {
   .start-content {
