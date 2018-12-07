@@ -34,7 +34,12 @@ class TI4Cheat extends React.Component {
             const selectedFactions = (qs.parse(location.search, {arrayFormat: 'bracket'}).factions || [])
                 .map((factionKey) => factionMap[factionKey]);
             return (
-                <FactionList factions={selectedFactions}/>
+                <FactionList
+                    factions={selectedFactions}
+                    races={this.state.races}
+                    unselectFunction={this.unselectFaction}
+                    selectFunction={this.selectFaction}
+                />
             );
         };
     }
@@ -66,6 +71,7 @@ class TI4Cheat extends React.Component {
         this.unselectFaction = TI4Cheat.unselectFaction.bind(this);
 
         this.renderFactionSelector = TI4Cheat.renderFactionSelector.bind(this);
+        this.renderFactionListBuilder = TI4Cheat.renderFactionListBuilder.bind(this);
 
     }
 
@@ -79,7 +85,7 @@ class TI4Cheat extends React.Component {
                             <TransitionGroup>
                                 <CSSTransition key={location.key} classNames="fade" timeout={300}>
                                     <Switch location={location}>
-                                        <Route exact path="/factions" render={TI4Cheat.renderFactionListBuilder(location)}/>
+                                        <Route exact path="/factions" render={this.renderFactionListBuilder(location)}/>
                                         <Route exact render={this.renderFactionSelector}/>
                                     </Switch>
                                 </CSSTransition>

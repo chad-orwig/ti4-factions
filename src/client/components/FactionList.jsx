@@ -2,6 +2,7 @@ const React = require('react');
 const PropTypes = require('prop-types');
 const Faction = require('./Faction.jsx');
 const {Link} = require('react-router-dom');
+const FactionSelectionGrid = require('./FactionSelectionGrid.jsx');
 
 function factionBuilder(faction, index) {
     return (
@@ -19,7 +20,7 @@ function factionBuilder(faction, index) {
         />
     );
 }
-function FactionList({factions}) {
+function FactionList({factions, races, selectFunction, unselectFunction}) {
     if(!Array.isArray(factions) || factions.length === 0) {
         return (
             <div style={{padding: '20px'}}>
@@ -31,8 +32,11 @@ function FactionList({factions}) {
 
     const factionElements = factions.map(factionBuilder);
     return (
-        <div className="faction-list">
-            {factionElements}
+        <div className="faction-list-page">
+            <FactionSelectionGrid races={races} selectFunction={selectFunction} unselectFunction={unselectFunction}/>
+            <div className="faction-list">
+                {factionElements}
+            </div>
         </div>
     );
 }
