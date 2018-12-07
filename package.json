@@ -14,7 +14,7 @@
     "build:html": "node src/server/buildHtml.js",
     "prebuild": "npm-run-all lint clean-dist build:html",
     "build": "node src/server/build.js",
-    "prestart": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gcloud app deploy --quiet --project ti4-factions",
     "start": "npm run dist:server",
     "dist:server": "node src/server/distServer.js"
