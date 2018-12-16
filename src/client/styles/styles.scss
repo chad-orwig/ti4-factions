@@ -129,8 +129,10 @@ body {
   flex-flow: row wrap;
   align-items: stretch;
   padding-bottom: 5em;
+  padding-top: 5em;
   @media (min-width: $breakpoint-mobile) {
     padding-bottom: inherit;
+    padding-top: inherit;
   }
   .faction-selector {
     padding: 10px;
@@ -163,6 +165,12 @@ body {
       flex:  1 0 20em;
     }
   }
+}
+
+.donate-btn {
+  position: absolute;
+  top : 15px;
+  left: 15px;
 }
 
 .button-bar {
@@ -328,7 +336,11 @@ body {
 }
 .faction-list {
   padding-bottom: 5em;
-
+  padding-top: 5em;
+  @media (min-width: $breakpoint-mobile) {
+    padding-bottom: inherit;
+    padding-top: inherit;
+  }
 }
 .btn-primary {
   color: #fff;

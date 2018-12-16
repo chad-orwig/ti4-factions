@@ -6,6 +6,7 @@ const FactionSelectionGrid = require('./FactionSelectionGrid.jsx');
 const ButtonBar = require('./ButtonBar.jsx');
 const _ = require('lodash');
 const ScrollToTop = require('./ScrollToTop.jsx');
+const DonateButton = require('./DonateButton.jsx');
 const { BrowserRouter:Router, Route, Switch} = require('react-router-dom');
 const qs = require('query-string');
 
@@ -75,6 +76,7 @@ class TI4Cheat extends React.Component {
                 <ScrollToTop>
                     <Route render={({location}) => {
                         return <div>
+                            <DonateButton/>
                             <ButtonBar races={this.state.races}/>
                             <TransitionGroup>
                                 <CSSTransition key={location.key} classNames="fade" timeout={300}>
