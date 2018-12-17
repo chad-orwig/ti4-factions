@@ -343,6 +343,14 @@ body {
     padding-top: inherit;
   }
 }
+.no-factions {
+  padding-bottom: 5em;
+  padding-top: 5em;
+  @media (min-width: $breakpoint-mobile) {
+    padding-bottom: inherit;
+    padding-top: inherit;
+  }
+}
 .btn-primary {
   color: #fff;
   background-color: #007bff;

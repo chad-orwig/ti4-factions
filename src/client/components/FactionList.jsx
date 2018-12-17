@@ -22,7 +22,7 @@ function factionBuilder(faction, index) {
 function FactionList({factions}) {
     if(!Array.isArray(factions) || factions.length === 0) {
         return (
-            <div style={{padding: '20px'}}>
+            <div className="no-factions">
                 <h1>No Factions Selected</h1>
                 <h2><Link to="/">Select some factions first</Link></h2>
             </div>
