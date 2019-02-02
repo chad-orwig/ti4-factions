@@ -1,4 +1,4 @@
 runtime: nodejs8
 automatic_scaling:
-  max-instances: 2
-  min-instances: 1
+  max_instances: 2
+  min_instances: 1
