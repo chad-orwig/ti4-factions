@@ -17,7 +17,9 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "styles.css"
         }),
-        new CopyWebpackPlugin([{from : './src/client/assets/imgs/favicon.ico', to: __dirname + '/dist'}])
+        new CopyWebpackPlugin([
+            {from : './src/client/assets/static', to: __dirname + '/dist'}
+        ])
     ],
     module : {
         rules : [
