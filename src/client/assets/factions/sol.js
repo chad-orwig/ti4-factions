@@ -9,7 +9,7 @@ module.exports = {
         },
         {
             name : 'Versatile',
-            text : 'When you cain Command Tokens during the status phase, gain 1 additional Command Token'
+            text : 'When you gain Command Tokens during the status phase, gain 1 additional Command Token'
         }
     ],
     flagship : {

@@ -37,15 +37,14 @@ module.exports = {
             name : 'Mirror Computing',
             type : 'Y',
             requirements : ['Y', 'Y', 'Y'],
-            text : 'After another player activates a system that contains 1 or more of your ' +
-            'ships, gain 4 Trade Goods.When you spend Trade Goods, each Trade Good is worth 2 resources or influence.'
+            text : 'When you spend Trade Goods, each Trade Good is worth 2 resources or influence.'
         }
     ],
     promissoryNote : {
         name : 'Promise of Protection',
         text : 'ACTION: Place this card faceup in your play area. While this card is in your play area, ' +
         'the Mentak player cannot use his Pillage faction ability against you. ' +
-        'If you activate a system that contains 2 or more of the Mentak player\'s units, ' +
+        'If you activate a system that contains 1 or more of the Mentak player\'s units, ' +
         'return this card to the Mentak player.'
     },
     commodities : 2,
