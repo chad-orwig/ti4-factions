@@ -32,7 +32,7 @@ module.exports = {
             requirements : ['Y', 'B', 'B'],
             text : [
                 'L1Z1X Dreadnought (Cost 4; Combat 4; move 2; Capacity 2)',
-                'This unit cannot be destroyed by "direct Hit" action cards',
+                'This unit cannot be destroyed by "Direct Hit" action cards',
                 'Sustain Damage',
                 'Bombardment 4'
             ]
