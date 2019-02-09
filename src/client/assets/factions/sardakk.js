@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Sardakk N\'orr',
-    img : require('../imgs/image23.png'),
+    img : require('../imgs/norr.png'),
     abilities : [
         {
             name : 'Unrelenting',

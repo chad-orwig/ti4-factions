@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Embers of Muaat',
-    img : require('../imgs/image32.png'),
+    img : require('../imgs/muaat.png'),
     abilities : [
         {
             name : 'Star Forge',

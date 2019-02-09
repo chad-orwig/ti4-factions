@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Federation of Sol',
-    img : require('../imgs/image28.png'),
+    img : require('../imgs/sol.png'),
     abilities : [
         {
             name : 'Orbital Drop',

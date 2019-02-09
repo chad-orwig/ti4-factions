@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Arborec',
-    img : require('../imgs/image5.png'),
+    img : require('../imgs/arborec.png'),
     abilities : [
         {
             name : 'Mitosis',

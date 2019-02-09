@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Mentak Coalition',
-    img : require('../imgs/image10.png'),
+    img : require('../imgs/mentak.png'),
     abilities : [
         {
             name : 'Ambush',

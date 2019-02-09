@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Universities of Jol-Nar',
-    img : require('../imgs/image29.png'),
+    img : require('../imgs/jol-nar.png'),
     abilities : [
         {
             name : 'Fragile',

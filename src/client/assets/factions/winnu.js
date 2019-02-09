@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Winnu',
-    img : require('../imgs/image16.png'),
+    img : require('../imgs/winnu.png'),
     abilities : [
         {
             name : 'Blood Ties',

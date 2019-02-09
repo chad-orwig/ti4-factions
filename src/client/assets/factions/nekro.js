@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Nekro Virus',
-    img : require('../imgs/image17.png'),
+    img : require('../imgs/nekro.png'),
     abilities : [
         {
             name : 'Galactic Threat',

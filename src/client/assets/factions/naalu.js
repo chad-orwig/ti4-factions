@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Naalu Collective',
-    img : require('../imgs/image22.png'),
+    img : require('../imgs/naalu.png'),
     abilities : [
         {
             name : 'Telepathic',

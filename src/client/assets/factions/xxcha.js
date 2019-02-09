@@ -1,6 +1,6 @@
 module.exports = {
     name : 'Xxcha Kingdom',
-    img : require('../imgs/image7.png'),
+    img : require('../imgs/xxcha.png'),
     abilities : [
         {
             name : 'Peace Accords',
