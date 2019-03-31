@@ -31,7 +31,7 @@ module.exports = {
             type : 'Y',
             requirements : ['Y', 'Y'],
             text : 'After you win or lose a space combat, gain 1 Trade Good; if you won the combat, ' +
-            'you may also produce 1 ship in htat system of any ship type that was destroyed during the combat'
+            'you may also produce 1 ship in that system of any ship type that was destroyed during the combat'
         },
         {
             name : 'Mirror Computing',
