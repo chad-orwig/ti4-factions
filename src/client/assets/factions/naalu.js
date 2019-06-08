@@ -18,7 +18,7 @@ module.exports = {
         move : 1,
         capacity: 6,
         abilities : [
-            'During an invasion in this system you may commit fighters to planets as if they wer Ground Forces. After combat, return those units to the space area',
+            'During an invasion in this system you may commit fighters to planets as if they were Ground Forces. After combat, return those units to the space area',
             'Sustain Damage'
         ]
     },

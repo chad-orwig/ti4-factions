@@ -3,7 +3,7 @@ const PropTypes = require('prop-types');
 
 function CommoditiesCount({count}) {
     return (
-        <div className="commodities">
+        <div className="commodities" title="Commodities">
             <span>{count}</span>
             <i className="fa fa-handshake-o" />
         </div>
