@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Emirates of Hacan',
     img : require('../imgs/image6.png'),
@@ -51,10 +53,10 @@ module.exports = {
     },
     commodities : 6,
     start : {
-        tech : {
-            'Antimass Deflectors' : 'B',
-            'Sarween Tools' : 'Y'
-        },
+        tech : [
+            Tech['Antimass Deflectors'],
+            Tech['Sarween Tools']
+        ],
         units : [
             '2 Carriers',
             '1 Cruiser',

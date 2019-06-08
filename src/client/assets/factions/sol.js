@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Federation of Sol',
     img : require('../imgs/sol.png'),
@@ -76,10 +78,10 @@ module.exports = {
                 influence : 2
             }
         ],
-        tech : {
-            'Neural Motivator' : 'G',
-            'Antimass Deflectors' : 'B'
-        },
+        tech : [
+            Tech['Neural Motivator'],
+            Tech['Antimass Deflectors']
+        ],
         units : [
             '2 Carriers',
             '1 Destroyer',

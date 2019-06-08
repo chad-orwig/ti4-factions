@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Winnu',
     img : require('../imgs/winnu.png'),
@@ -49,9 +51,7 @@ module.exports = {
     },
     commodities : 3,
     start : {
-        tech : {
-            'Choose any 1 technology that has no prerequisites.' : 'W'
-        },
+        tech : [ Tech['Choose any 1 technology that has no prerequisites.'] ],
         units : [
             '1 Carrier',
             '1 Cruiser',

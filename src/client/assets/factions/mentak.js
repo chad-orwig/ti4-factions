@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Mentak Coalition',
     img : require('../imgs/mentak.png'),
@@ -49,10 +51,10 @@ module.exports = {
     },
     commodities : 2,
     start : {
-        tech : {
-            'Sarween Tools' : 'Y',
-            'Plasma Scoring': 'R'
-        },
+        tech : [
+            Tech['Sarween Tools'],
+            Tech['Plasma Scoring']
+        ],
         units: [
             '1 Carrier',
             '2 Cruisers',

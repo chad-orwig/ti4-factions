@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Nekro Virus',
     img : require('../imgs/nekro.png'),
@@ -52,10 +54,10 @@ module.exports = {
     },
     commodities : 3,
     start : {
-        tech : {
-            'Daxcive Animators' : 'G',
-            'Velefar Assimilator X/Y' : 'W'
-        },
+        tech : [
+            Tech['Dacxive Animators'],
+            Tech['Valefar Assimilator Y and X']
+        ],
         units : [
             '1 Dreadnought',
             '1 Carrier',

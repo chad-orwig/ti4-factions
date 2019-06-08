@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Ghosts of Creuss',
     img : require('../imgs/image24.png'),
@@ -47,9 +49,7 @@ module.exports = {
     },
     commodities : 4,
     start : {
-        tech : {
-            'Gravity Drive' : 'B'
-        },
+        tech : [ Tech['Gravity Drive'] ],
         units : [
             '1 Carrier',
             '2 Destroyers',

@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Barony of Letnev',
     img : require('../imgs/image13.png'),
@@ -47,10 +49,10 @@ module.exports = {
     },
     commodities : 2,
     start : {
-        tech : {
-            'Antimass Deflectors' : 'B',
-            'Plasma Scoring' : 'R'
-        },
+        tech : [
+            Tech['Antimass Deflectors'],
+            Tech['Plasma Scoring']
+        ],
         units : [
             '1 Dreadnought',
             '1 Carrier',

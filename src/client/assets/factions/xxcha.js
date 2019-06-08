@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Xxcha Kingdom',
     img : require('../imgs/xxcha.png'),
@@ -63,9 +65,7 @@ module.exports = {
                 influence : 1
             }
         ],
-        tech : {
-            'Graviton Laser System' : 'Y'
-        },
+        tech : [ Tech['Graviton Laser System'] ],
         units : [
             '1 Carrier',
             '2 Cruisers',

@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Naalu Collective',
     img : require('../imgs/naalu.png'),
@@ -52,10 +54,10 @@ module.exports = {
         combat : 8
     }],
     start : {
-        tech : {
-            'Neural Motivator' : 'G',
-            'Sarween Tools' : 'Y'
-        },
+        tech : [
+            Tech['Neural Motivator'],
+            Tech['Sarween Tools']
+        ],
         units : [
             '1 Carrier',
             '1 Cruiser',

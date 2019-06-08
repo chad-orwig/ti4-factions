@@ -1,3 +1,5 @@
+const Tech = require('../tech/tech');
+
 module.exports = {
     name : 'Arborec',
     img : require('../imgs/arborec.png'),
@@ -47,9 +49,7 @@ module.exports = {
         ]
     }],
     start : {
-        tech : {
-            'Magen Defense Grid' : 'R'
-        },
+        tech : [ Tech['Magen Defense Grid'] ],
         units : [
             '1 Carrier',
             '1 Cruiser',
