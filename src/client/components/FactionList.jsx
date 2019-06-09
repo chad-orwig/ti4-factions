@@ -2,7 +2,7 @@ const React = require('react');
 const PropTypes = require('prop-types');
 const Faction = require('./Faction.jsx');
 const {Link} = require('react-router-dom');
-const Technology = require('./Technology.jsx');
+const TechPopup = require('./TechPopup.jsx');
 
 function factionBuilder(faction, index, showTechDetails) {
     return (
@@ -32,7 +32,7 @@ function FactionList({factions, shownTech, showTechDetails}) {
     }
 
     const factionElements = factions.map((faction, index) => factionBuilder(faction, index, showTechDetails));
-    const techPopup = shownTech ? (<div><Technology type={shownTech.tech.type} name={shownTech.tech.name} requirements={shownTech.tech.requirements} text={shownTech.tech.text}/></div>) : '';
+    const techPopup = shownTech ? (<TechPopup tech={shownTech.tech} x={shownTech.x} y={shownTech.y}/>) : '';
     return (
         <div className="faction-list">
             {techPopup}
