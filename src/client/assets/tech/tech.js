@@ -21,7 +21,8 @@ module.exports = {
         name : 'Antimass Deflectors',
         type : 'B',
         text : 'Your ships can move into and through asteroid fields. When other players’ ' +
-            'units use SPACE CANNON against your units, apply -1 to the result of each die roll.'
+            'units use SPACE CANNON against your units, apply -1 to the result of each die roll.',
+        requirements : []
     },
     'Integrated Economy' : {
         name : 'Integrated Economy',
@@ -104,18 +105,27 @@ module.exports = {
     },
     'Valefar Assimilator Y and X' : {
         name : 'Valefar Assimilator Y and X',
-        type : 'W',
+        type : 'U',
         text : 'When you would gain another player’s technology using one of your faction abilities, you may place ' +
             'the (Y or X) assimilator token on a faction technology owned by that player instead. While that token is ' +
             'on a technology, this card gains that technology’s text. You cannot place an assimilator token on technology ' +
             'that already has an assimilator token.',
-        requirements : ['Nekro Virus']
+        requirements : [
+            {
+                img: require('../imgs/nekro.png'),
+                faction: 'Nekro Virus'
+            }
+        ]
     },
     'Choose any 1 technology that has no prerequisites.' : {
         name : 'Choose any 1 technology that has no prerequisites.',
-        type : 'W',
+        type : 'U',
         text : 'Choose any 1 technology that has no prerequisites.',
-        requirements : ['Winnu']
+        requirements : [
+            {
+                img: require('../imgs/winnu.png'),
+                faction: 'Winnu'
+            }
+        ]
     }
-
-}
+};

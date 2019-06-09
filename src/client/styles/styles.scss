@@ -302,14 +302,14 @@ body {
 .start-situation {
   .start-content {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     ul {
       border : 1px solid black;
     }
     .starting-tech {
-      flex : 1 1 10em;
+      flex : 1 1 5em;
       padding: 0 30px;
-      max-width: 20em;
+      margin-bottom: 0;
       .B {
         color : $tech-blue;
       }
@@ -328,6 +328,7 @@ body {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
+      margin-top: 0;
       li {
         flex : 0 0 50%;
         min-width: 8em;
