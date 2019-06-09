@@ -1,15 +1,15 @@
 const React = require('react');
-const {array} = require('prop-types');
+const {array, func} = require('prop-types');
 const StartingTech = require('./StartingTech.jsx');
 const StartingUnits = require('./StartingUnits.jsx');
 
-function Start({units, tech}) {
+function Start({units, tech, showTechDetails}) {
     return (
         <div className="start-situation">
             <h2>Starting Setup</h2>
             <div className="start-content">
                 {tech.length > 0 &&
-                    <StartingTech tech={tech}/>
+                    <StartingTech techArray={tech} showTechDetails={showTechDetails}/>
                 }
                 <StartingUnits units={units}/>
             </div>
@@ -19,7 +19,8 @@ function Start({units, tech}) {
 
 Start.propTypes = {
     units : array.isRequired,
-    tech : array.isRequired
+    tech : array.isRequired,
+    showTechDetails : func.isRequired
 };
 
 module.exports = Start;

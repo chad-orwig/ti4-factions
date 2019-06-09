@@ -8,7 +8,7 @@ const PromissoryNote = require('./PromissoryNote.jsx');
 const SpecialUnit = require('./SpecialUnit.jsx');
 const Start = require('./Start.jsx');
 const HomeSystem = require('./HomeSystem.jsx');
-function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities, specialUnits, start}) {
+function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities, specialUnits, start, showTechDetails}) {
     const specialUnitSection = specialUnits ? specialUnits.map( (u, index) => <SpecialUnit key={index} unit={u} />) : '';
     return (
         <div className="faction">
@@ -25,7 +25,7 @@ function Faction({name, img, abilities, flagship, techs, promissoryNote, commodi
             {specialUnitSection}
             <TechnologySection techs={techs}/>
             <PromissoryNote name={promissoryNote.name} text={promissoryNote.text}/>
-            <Start tech={start.tech} units={start.units} />
+            <Start tech={start.tech} units={start.units} showTechDetails={showTechDetails}/>
             <HomeSystem planets={start.home}/>
         </div>
     );
@@ -40,7 +40,8 @@ Faction.propTypes = {
     img : PropTypes.string.isRequired,
     commodities : PropTypes.number.isRequired,
     specialUnits : PropTypes.array,
-    start: PropTypes.object.isRequired
+    start: PropTypes.object.isRequired,
+    showTechDetails : PropTypes.func.isRequired
 };
 
 module.exports = Faction;

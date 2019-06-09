@@ -11,7 +11,7 @@ function requirementBuilder(req, index) {
 }
 
 function Technology({type, name, requirements, text}) {
-    const requirementElements = requirements.map(requirementBuilder).length > 0 ?
+    const requirementElements = requirements.length > 0 ?
         <span>({requirements.map(requirementBuilder)}):</span> : requirements.map(requirementBuilder);
     return (
     <div className="technology">
