@@ -1,4 +1,4 @@
-const Tech = require('../tech/tech');
+const Tech = require('../tech');
 
 module.exports = {
     name : 'Nekro Virus',
