@@ -8,10 +8,14 @@ const PromissoryNote = require('./PromissoryNote.jsx');
 const SpecialUnit = require('./SpecialUnit.jsx');
 const Start = require('./Start.jsx');
 const HomeSystem = require('./HomeSystem.jsx');
-function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities, specialUnits, start, showTechDetails}) {
+function Faction({name, img, abilities, flagship, techs, promissoryNote, commodities, specialUnits, start, showTechDetails, hideTechDetails}) {
     const specialUnitSection = specialUnits ? specialUnits.map( (u, index) => <SpecialUnit key={index} unit={u} />) : '';
+    const onClick = function(e) {
+        e.preventDefault();
+        hideTechDetails();
+    };
     return (
-        <div className="faction">
+        <div className="faction" onClick={onClick}>
             <FactionHeader name={name} img={img} commodities={commodities}/>
             <FactionAbilities abilities={abilities}/>
             <h2>Flagship</h2>
@@ -41,7 +45,8 @@ Faction.propTypes = {
     commodities : PropTypes.number.isRequired,
     specialUnits : PropTypes.array,
     start: PropTypes.object.isRequired,
-    showTechDetails : PropTypes.func.isRequired
+    showTechDetails : PropTypes.func.isRequired,
+    hideTechDetails : PropTypes.func.isRequired
 };
 
 module.exports = Faction;

@@ -3,7 +3,10 @@ const {withRouter, Link} = require('react-router-dom');
 const _ = require('lodash');
 const qs = require('query-string');
 
-const ButtonBar = withRouter(({location, races}) => {
+const ButtonBar = withRouter(({location, races, hideTechDetails}) => {
+    const onClick = function() {
+        hideTechDetails();
+    };
     const selectedRaces = _.filter(races, "selected")
         .map(r=>r.factionKey);
     const queryString = qs.stringify({
@@ -12,7 +15,7 @@ const ButtonBar = withRouter(({location, races}) => {
     const onSelectionPage = location.pathname !== "/factions";
     const selectionButton = onSelectionPage ?
         <span className="nav-button disabled btn btn-primary btn-lg">Selection</span> :
-        <Link to="/" className="nav-button btn btn-primary btn-lg">Selection</Link>;
+        <Link to="/" className="nav-button btn btn-primary btn-lg" onClick={onClick}>Selection</Link>;
 
     const detailsButton = onSelectionPage ?
         <Link to={`/factions?${queryString}`} className="right-button nav-button btn btn-primary btn-lg">Details</Link> :

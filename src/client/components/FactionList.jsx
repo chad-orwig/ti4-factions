@@ -4,7 +4,7 @@ const Faction = require('./Faction.jsx');
 const {Link} = require('react-router-dom');
 const TechPopup = require('./TechPopup.jsx');
 
-function factionBuilder(faction, index, showTechDetails) {
+function factionBuilder(faction, index, showTechDetails, hideTechDetails) {
     return (
         <Faction
             key={index}
@@ -18,10 +18,11 @@ function factionBuilder(faction, index, showTechDetails) {
             specialUnits={faction.specialUnits}
             start={faction.start}
             showTechDetails={showTechDetails}
+            hideTechDetails={hideTechDetails}
         />
     );
 }
-function FactionList({factions, shownTech, showTechDetails}) {
+function FactionList({factions, shownTech, showTechDetails, hideTechDetails}) {
     if(!Array.isArray(factions) || factions.length === 0) {
         return (
             <div className="no-factions">
@@ -31,8 +32,8 @@ function FactionList({factions, shownTech, showTechDetails}) {
         );
     }
 
-    const factionElements = factions.map((faction, index) => factionBuilder(faction, index, showTechDetails));
-    const techPopup = shownTech ? (<TechPopup tech={shownTech.tech} x={shownTech.x} y={shownTech.y}/>) : '';
+    const factionElements = factions.map((faction, index) => factionBuilder(faction, index, showTechDetails, hideTechDetails));
+    const techPopup = shownTech ? (<TechPopup tech={shownTech.tech} target={shownTech.target} hideTechDetails={hideTechDetails}/>) : '';
     return (
         <div className="faction-list">
             {techPopup}
@@ -43,6 +44,7 @@ function FactionList({factions, shownTech, showTechDetails}) {
 
 FactionList.propTypes = {
     factions : PropTypes.array.isRequired,
+    hideTechDetails : PropTypes.func.isRequired,
     showTechDetails : PropTypes.func.isRequired,
     shownTech : PropTypes.object
 };

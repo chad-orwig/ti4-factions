@@ -35,7 +35,7 @@ static renderFactionListBuilder(location) {
             const selectedFactions = (qs.parse(location.search, {arrayFormat: 'bracket'}).factions || [])
                 .map((factionKey) => factionMap[factionKey]);
             return (
-                <FactionList factions={selectedFactions} showTechDetails={this.showTechDetails} shownTech={this.state.shownTech}/>
+                <FactionList factions={selectedFactions} showTechDetails={this.showTechDetails} hideTechDetails={this.hideTechDetails} shownTech={this.state.shownTech}/>
             );
         };
         }
@@ -58,15 +58,17 @@ static renderFactionListBuilder(location) {
             this.setState({races});
         }
     }
-    static showTechDetails (tech, x, y) {
+    static showTechDetails (tech, e) {
         this.setState({
-            shownTech : {tech, x, y}
+            shownTech : {tech, target : e.currentTarget}
         });
     }
     static hideTechDetails() {
-        this.setState({
-            shownTech : undefined
-        });
+        if (this.state.shownTech) {
+            this.setState({
+                shownTech : undefined
+            });
+        }
     }
     constructor() {
         super();
@@ -90,7 +92,7 @@ static renderFactionListBuilder(location) {
                     <Route render={({location}) => {
                         return <div>
                             <DonateButton/>
-                            <ButtonBar races={this.state.races}/>
+                            <ButtonBar races={this.state.races} hideTechDetails={this.hideTechDetails}/>
                             <TransitionGroup>
                                 <CSSTransition key={location.key} classNames="fade" timeout={300}>
                                     <Switch location={location}>
