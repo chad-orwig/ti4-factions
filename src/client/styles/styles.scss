@@ -3,8 +3,8 @@ $tech-red : firebrick;
 $tech-blue: #007bff;
 $tech-yellow: darkgoldenrod;
 $grey : #ddd;
-$light-blue: rgba($tech-blue, .65);
-$v-light-blue: rgba($tech-blue, .1);
+$light-blue: #59a9ff;
+$v-light-blue: #e5f1ff;
 
 $breakpoint-mobile : 37.5em;
 $breakpoint-2column : 50em;
@@ -406,7 +406,26 @@ h3 {
   border-radius: 0.3rem;
 }
 
+.tech-popup {
+  position:fixed;
+  z-index: 3;
+  top : 1%;
+  left : 1%;
+  right: 1%;
+  bottom: 1%;
+  background: $v-light-blue;
+  border: 3px solid $tech-blue;
+  padding : 10px;
+}
+
 @media (min-width: $breakpoint-2column) {
+  .tech-popup {
+    position: absolute;
+    top: var(--event-y);
+    left: var(--event-x);
+    bottom: unset;
+    right : unset;
+  }
   .faction-list {
     display: flex;
     flex-flow : row wrap;

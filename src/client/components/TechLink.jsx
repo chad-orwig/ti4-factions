@@ -5,7 +5,7 @@ const {object, func} = require('prop-types');
 const TechLink = function({tech, showTechDetails}) {
     const onClick = function(e) {
         e.preventDefault();
-        showTechDetails(tech, e.clientX, e.clientY);
+        showTechDetails(tech, e.currentTarget.offsetWidth, e.currentTarget.offsetTop);
     };
     return <a onClick={onClick} className={tech.type}>{tech.name}</a>;
 
