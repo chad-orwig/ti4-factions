@@ -405,10 +405,11 @@ h3 {
   border-radius: 0.3rem;
 }
 
-.link {
+.techlink {
   text-decoration: underline;
   cursor: pointer;
   font-weight: bold;
+  position: relative;
 }
 
 .tech-popup {
@@ -420,14 +421,16 @@ h3 {
   bottom: 1%;
   background: $v-light-blue;
   border: 3px solid $tech-blue;
+  border-radius: .3rem;
   padding : 10px;
 }
 
 @media (min-width: $breakpoint-2column) {
   .tech-popup {
     position: absolute;
-    top: var(--event-y);
-    left: var(--event-x);
+    top: 10px;
+    left: 10px;
+    width: 350px;
     bottom: unset;
     right : unset;
   }

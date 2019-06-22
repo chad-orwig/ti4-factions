@@ -1,19 +1,24 @@
 const React = require('react');
-const {object, func} = require('prop-types');
+const {object} = require('prop-types');
+const TechPopup = require('./TechPopup.jsx');
 
 
-const TechLink = function({tech, showTechDetails}) {
-    const onClick = function(e) {
-        e.preventDefault();
-        showTechDetails(tech, e);
-    };
-    return <a onClick={onClick} className={`link ${tech.type}`}>{tech.name}</a>;
+const TechLink = function({tech}) {
+
+    const [ showPop, setShowPop ] = React.useState(false);
+    const togglePop = () => setShowPop(!showPop);
+
+    const popup = showPop ? <TechPopup tech={tech} hideTechDetails={togglePop} /> : '';
+
+    return <a onClick={togglePop} className={`techlink ${tech.type}`}>
+        {tech.name}
+        {popup}
+    </a>;
 
 };
 
 TechLink.propTypes = {
-    tech : object.isRequired,
-    showTechDetails : func.isRequired
+    tech : object.isRequired
 };
 
 module.exports = TechLink;
