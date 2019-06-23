@@ -3,8 +3,8 @@ $tech-red : firebrick;
 $tech-blue: #007bff;
 $tech-yellow: darkgoldenrod;
 $grey : #ddd;
-$light-blue: rgba($tech-blue, .65);
-$v-light-blue: rgba($tech-blue, .1);
+$light-blue: #59a9ff;
+$v-light-blue: #e5f1ff;
 
 $breakpoint-mobile : 37.5em;
 $breakpoint-2column : 50em;
@@ -50,23 +50,34 @@ body {
   &.Y {
     background-color: $tech-yellow;
   }
-  &.U {
+  &.U,&.winnu,&.nekro {
     position: relative;
     border-radius: .2em;
     display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 14px;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
     width: 1.5em;
     height: 1.5em;
-    color: #eee;
-    background-color: #333;
-    text-align: center;
+    background-size: contain;
     &:before {
       position: relative;
       top : .2em;
       vertical-align: baseline;
+    }
+  }
+  &.winnu {
+    background-image: url('../assets/imgs/winnu.png');
+  }
+  &.nekro {
+    background-image: url('../assets/imgs/nekro.png');
+  }
+  &.U {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    color: #eee;
+    background-color: #333;
+    text-align: center;
+    &:before {
       content : "\F062"
     }
   }
@@ -307,8 +318,8 @@ body {
       border : 1px solid black;
     }
     .starting-tech {
-      flex : 1 1 10em;
-      padding: 0 30px;
+      flex : 1 1 5em;
+      padding: 0 10px 0 30px;
       max-width: 20em;
       .B {
         color : $tech-blue;
@@ -328,6 +339,7 @@ body {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
+      padding: 0 0 0 30px;
       li {
         flex : 0 0 50%;
         min-width: 8em;
@@ -405,7 +417,35 @@ h3 {
   border-radius: 0.3rem;
 }
 
+.techlink {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+
+.tech-popup {
+  position:fixed;
+  z-index: 3;
+  top : 1%;
+  left : 1%;
+  right: 1%;
+  bottom: 1%;
+  background: $v-light-blue;
+  border: 3px solid $tech-blue;
+  border-radius: .3rem;
+  padding : 10px;
+}
+
 @media (min-width: $breakpoint-2column) {
+  .tech-popup {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 350px;
+    bottom: unset;
+    right : unset;
+  }
   .faction-list {
     display: flex;
     flex-flow : row wrap;

@@ -1,3 +1,5 @@
+const Tech = require('../tech');
+
 module.exports = {
     name : 'L1Z1X',
     img : require('../imgs/image25.png'),
@@ -65,10 +67,10 @@ module.exports = {
         ]
     }],
     start : {
-        tech : {
-            'Neural Motivator' : 'G',
-            'Plasma Scoring' : 'R'
-        },
+        tech : [
+            Tech['Neural Motivator'],
+            Tech['Plasma Scoring']
+        ],
         units : [
             '1 Dreadnought',
             '1 Carrier',

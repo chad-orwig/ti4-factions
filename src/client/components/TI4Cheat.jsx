@@ -30,15 +30,15 @@ class TI4Cheat extends React.Component {
         />;
     }
 
-    static renderFactionListBuilder(location) {
+static renderFactionListBuilder(location) {
         return () => {
             const selectedFactions = (qs.parse(location.search, {arrayFormat: 'bracket'}).factions || [])
                 .map((factionKey) => factionMap[factionKey]);
             return (
-                <FactionList factions={selectedFactions}/>
+                <FactionList factions={selectedFactions} showTechDetails={this.showTechDetails} hideTechDetails={this.hideTechDetails} shownTech={this.state.shownTech}/>
             );
         };
-    }
+        }
     static unselectFaction (factionKey) {
         const raceIndex = this.findRaceIndex(factionKey);
         if(raceIndex >= 0) {
@@ -58,6 +58,18 @@ class TI4Cheat extends React.Component {
             this.setState({races});
         }
     }
+    static showTechDetails (tech, e) {
+        this.setState({
+            shownTech : {tech, target : e.currentTarget}
+        });
+    }
+    static hideTechDetails() {
+        if (this.state.shownTech) {
+            this.setState({
+                shownTech : undefined
+            });
+        }
+    }
     constructor() {
         super();
 
@@ -67,6 +79,9 @@ class TI4Cheat extends React.Component {
         this.unselectFaction = TI4Cheat.unselectFaction.bind(this);
 
         this.renderFactionSelector = TI4Cheat.renderFactionSelector.bind(this);
+        this.showTechDetails = TI4Cheat.showTechDetails.bind(this);
+        this.hideTechDetails = TI4Cheat.hideTechDetails.bind(this);
+        this.renderFactionListBuilder = TI4Cheat.renderFactionListBuilder;
 
     }
 
@@ -77,11 +92,11 @@ class TI4Cheat extends React.Component {
                     <Route render={({location}) => {
                         return <div>
                             <DonateButton/>
-                            <ButtonBar races={this.state.races}/>
+                            <ButtonBar races={this.state.races} hideTechDetails={this.hideTechDetails}/>
                             <TransitionGroup>
                                 <CSSTransition key={location.key} classNames="fade" timeout={300}>
                                     <Switch location={location}>
-                                        <Route exact path="/factions" render={TI4Cheat.renderFactionListBuilder(location)}/>
+                                        <Route exact path="/factions" render={this.renderFactionListBuilder(location)}/>
                                         <Route exact render={this.renderFactionSelector}/>
                                     </Switch>
                                 </CSSTransition>

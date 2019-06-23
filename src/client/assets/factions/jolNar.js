@@ -1,3 +1,5 @@
+const Tech = require('../tech');
+
 module.exports = {
     name : 'Universities of Jol-Nar',
     img : require('../imgs/jol-nar.png'),
@@ -51,12 +53,12 @@ module.exports = {
     },
     commodities : 4,
     start : {
-        tech : {
-            'Neural Motivator' : 'G',
-            'Antimass Deflectors' : 'B',
-            'Sarween Tools' : 'Y',
-            'Plasma Scoring' : 'R'
-        },
+        tech : [
+            Tech['Neural Motivator'],
+            Tech['Antimass Deflectors'],
+            Tech['Sarween Tools'],
+            Tech['Plasma Scoring']
+        ],
         units : [
             '1 Dreadnought',
             '2 Carriers',

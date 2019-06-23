@@ -3,10 +3,10 @@ const PropTypes = require('prop-types');
 const Faction = require('./Faction.jsx');
 const {Link} = require('react-router-dom');
 
-function factionBuilder(faction, index) {
+function factionBuilder(faction) {
     return (
         <Faction
-            key={index}
+            key={faction.name}
             name={faction.name}
             abilities={faction.abilities}
             techs={faction.techs}

@@ -1,3 +1,5 @@
+const Tech = require('../tech');
+
 module.exports = {
     name : 'The Yssaril Tribe',
     img : require('../imgs/image2.png'),
@@ -48,9 +50,7 @@ module.exports = {
     },
     commodities : 3,
     start : {
-        tech : {
-            'Neural Motivator' : 'G'
-        },
+        tech : [ Tech['Neural Motivator'] ],
         units : [
             '2 Carriers',
             '1 Cruiser',

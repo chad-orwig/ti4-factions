@@ -1,3 +1,5 @@
+const Tech = require('../tech');
+
 module.exports = {
     name : 'Embers of Muaat',
     img : require('../imgs/muaat.png'),
@@ -65,9 +67,7 @@ module.exports = {
         ]
     }],
     start : {
-        tech : {
-            'Plasma Scoring' : 'R'
-        },
+        tech : [ Tech['Plasma Scoring'] ],
         units : [
             '1 War Sun',
             '2 Fighters',

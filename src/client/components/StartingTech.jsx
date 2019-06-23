@@ -1,13 +1,18 @@
 const React = require('react');
-const {object} = require('prop-types');
+const {array} = require('prop-types');
+const TechLink = require('./TechLink.jsx');
 
-function StartingTech({tech}) {
-    const listItems = Object.keys(tech).map(key => <li key={key} className={tech[key]}>{key}</li>);
+function StartingTech({techArray}) {
+    const listItems = techArray.map((tech, index) =>
+        <li key={index}>
+            <TechLink tech={tech} />
+        </li>
+    );
     return <ul className="starting-tech">{listItems}</ul>;
 }
 
 StartingTech.propTypes = {
-    tech : object.isRequired
+    techArray : array.isRequired
 };
 
 module.exports = StartingTech;

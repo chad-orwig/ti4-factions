@@ -1,3 +1,5 @@
+const Tech = require('../tech');
+
 module.exports = {
     name : 'Clan of Saar',
     img : require('../imgs/image11.png'),
@@ -72,9 +74,7 @@ module.exports = {
         ]
     }],
     start : {
-        tech : {
-            'Antimass Deflectors' : 'B'
-        },
+        tech : [ Tech['Antimass Deflectors'] ],
         units : [
             '2 Carriers',
             '1 Cruiser',

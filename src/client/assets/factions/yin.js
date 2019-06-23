@@ -1,3 +1,5 @@
+const Tech = require('../tech');
+
 module.exports = {
     name : 'The Brotherhood of Yin',
     img : require('../imgs/image33.png'),
@@ -58,9 +60,7 @@ module.exports = {
                 influence : 4
             }
         ],
-        tech : {
-            'Sarween Tools' : 'Y'
-        },
+        tech : [ Tech['Sarween Tools'] ],
         units : [
             '2 Carriers',
             '1 Destroyer',

@@ -60,7 +60,7 @@ module.exports = {
         ]
     }],
     start : {
-        tech : {},
+        tech : [],
         units : [
             '2 Carrier',
             '1 Cruiser',
