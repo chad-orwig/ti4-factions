@@ -105,27 +105,17 @@ module.exports = {
     },
     'Valefar Assimilator Y and X' : {
         name : 'Valefar Assimilator Y and X',
-        type : 'U',
+        type : 'nekro',
         text : 'When you would gain another player’s technology using one of your faction abilities, you may place ' +
             'the (Y or X) assimilator token on a faction technology owned by that player instead. While that token is ' +
             'on a technology, this card gains that technology’s text. You cannot place an assimilator token on technology ' +
             'that already has an assimilator token.',
-        requirements : [
-            {
-                img: require('../imgs/nekro.png'),
-                faction: 'Nekro Virus'
-            }
-        ]
+        requirements : []
     },
     'Choose any 1 technology that has no prerequisites.' : {
         name : 'Choose any 1 technology that has no prerequisites.',
-        type : 'U',
+        type : 'winnu',
         text : 'Choose any 1 technology that has no prerequisites.',
-        requirements : [
-            {
-                img: require('../imgs/winnu.png'),
-                faction: 'Winnu'
-            }
-        ]
+        requirements : []
     }
 };
