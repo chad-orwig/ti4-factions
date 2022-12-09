@@ -27,7 +27,7 @@
     "compression": "^1.7.4",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "file-loader": "^1.1.11",
     "font-awesome-sass": "^4.7.0",
     "jsx-loader": "^0.13.2",
